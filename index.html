@@ -1,1025 +1,1304 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thiran Naleendra | Software Engineer</title>
-  <meta name="description" content="Thiran Naleendra - Software Engineer portfolio" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #081120;
-      --bg-soft: #0f1b31;
-      --card: rgba(15, 27, 49, 0.72);
-      --card-strong: #12213b;
-      --text: #e8eefc;
-      --muted: #9fb1d1;
-      --primary: #66e3ff;
-      --secondary: #8b5cf6;
-      --accent: #22c55e;
-      --border: rgba(255,255,255,0.1);
-      --shadow: 0 20px 50px rgba(0,0,0,0.35);
-      --radius: 24px;
-      --max: 1200px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(102, 227, 255, 0.18), transparent 28%),
-        radial-gradient(circle at top right, rgba(139, 92, 246, 0.15), transparent 30%),
-        linear-gradient(180deg, #06101d 0%, #091425 100%);
-      overflow-x: hidden;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
-
-    .bg-orb {
-      position: fixed;
-      width: 520px;
-      height: 520px;
-      border-radius: 50%;
-      filter: blur(70px);
-      opacity: 0.18;
-      z-index: -1;
-      pointer-events: none;
-    }
-    .orb-1 { background: #3b82f6; top: -120px; left: -100px; }
-    .orb-2 { background: #9333ea; top: 260px; right: -120px; }
-    .orb-3 { background: #10b981; bottom: -140px; left: 30%; }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(16px);
-      background: rgba(8, 17, 32, 0.7);
-      border-bottom: 1px solid var(--border);
-      transition: transform 0.35s ease, background 0.25s ease;
-    }
-    .nav.nav-hidden {
-      transform: translateY(-110%);
-    }
-    .nav.nav-scrolled {
-      background: rgba(8, 17, 32, 0.88);
-    }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-      gap: 24px;
-    }
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.3px;
-      font-size: 1.1rem;
-    }
-    .brand span { color: var(--primary); }
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.95rem;
-      transition: 0.25s ease;
-    }
-    .nav-links a:hover { color: var(--text); }
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      padding: 12px 18px;
-      background: linear-gradient(135deg, var(--primary), #4f8cff);
-      color: #04101e;
-      font-weight: 700;
-      border-radius: 999px;
-      box-shadow: var(--shadow);
-    }
-
-    .hero {
-      padding: 76px 0 40px;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-      gap: 26px;
-      align-items: stretch;
-    }
-    .hero-copy,
-    .hero-card {
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    .hero-copy {
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-      border: 1px solid var(--border);
-      border-radius: 32px;
-      padding: 38px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-      justify-content: space-between;
-    }
-    .hero-copy::after {
-      content: "";
-      position: absolute;
-      inset: auto -20% -45% auto;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(102,227,255,0.22), transparent 70%);
-    }
-    .hero-main {
-      position: relative;
-      z-index: 1;
-    }
-    .hero-bottom {
-      position: relative;
-      z-index: 1;
-      margin-top: 28px;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      border: 1px solid rgba(102, 227, 255, 0.3);
-      border-radius: 999px;
-      color: var(--primary);
-      background: rgba(102, 227, 255, 0.08);
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-    h1 {
-      font-size: clamp(2.4rem, 4vw, 4.7rem);
-      line-height: 1.02;
-      margin: 18px 0 16px;
-      letter-spacing: -1.8px;
-      max-width: 12ch;
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, #fff, var(--primary), #c084fc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
-    }
-    .hero-copy p {
-      color: var(--muted);
-      font-size: 1.03rem;
-      line-height: 1.8;
-      max-width: 62ch;
-      margin: 0;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 22px;
-      border-radius: 16px;
-      font-weight: 700;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-      border: 1px solid transparent;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary), #4f8cff);
-      color: #06101d;
-      box-shadow: var(--shadow);
-    }
-    .btn-secondary {
-      background: rgba(255,255,255,0.03);
-      border-color: var(--border);
-      color: var(--text);
-    }
-
-    .hero-card {
-      background: linear-gradient(180deg, rgba(19, 32, 58, 0.94), rgba(10, 18, 33, 0.94));
-      border: 1px solid var(--border);
-      border-radius: 32px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-      position: relative;
-      justify-content: center;
-    }
-    .profile-ring {
-      width: 132px;
-      height: 132px;
-      border-radius: 50%;
-      margin: 0 0 18px;
-      padding: 5px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      box-shadow: 0 16px 30px rgba(80, 132, 255, 0.25);
-    }
-    .profile-ring img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #091425;
-    }
-    .hero-card h2 {
-      margin: 0;
-      font-size: 1.95rem;
-      line-height: 1.1;
-    }
-    .hero-card .role {
-      color: var(--primary);
-      font-weight: 700;
-      margin-top: 8px;
-      margin-bottom: 18px;
-    }
-    .meta-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 14px;
-    }
-    .meta-item {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      color: var(--muted);
-      font-size: 0.96rem;
-      padding: 10px 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .meta-item:first-child { border-top: 0; }
-    .meta-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border);
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 26px;
-    }
-    .stat {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      padding: 20px 18px;
-      border-radius: 20px;
-      text-align: left;
-    }
-    .stat strong {
-      display: block;
-      font-size: 1.35rem;
-      margin-bottom: 8px;
-      color: #fff;
-    }
-    .stat span { color: var(--muted); font-size: 0.92rem; }
-
-    section {
-      padding: 34px 0;
-    }
-    .section-title {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 24px;
-    }
-    .section-title h3 {
-      margin: 0;
-      font-size: clamp(1.7rem, 2.8vw, 2.6rem);
-    }
-    .section-title p {
-      margin: 10px 0 0;
-      color: var(--muted);
-      max-width: 60ch;
-      line-height: 1.7;
-    }
-
-    .grid {
-      display: grid;
-      gap: 22px;
-    }
-    .grid-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-    }
-    .card h4 {
-      margin: 0 0 10px;
-      font-size: 1.08rem;
-    }
-    .card p, .card li {
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-    .about-grid .card {
-      min-height: 100%;
-    }
-
-    .pill-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .pill {
-      padding: 9px 13px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      color: #dce7ff;
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 18px;
-      position: relative;
-    }
-    .timeline-item {
-      position: relative;
-      padding-left: 24px;
-      border-left: 2px solid rgba(102, 227, 255, 0.25);
-    }
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -7px;
-      top: 4px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--primary);
-      box-shadow: 0 0 0 6px rgba(102, 227, 255, 0.12);
-    }
-    .timeline-item .date {
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 0.92rem;
-      display: inline-block;
-      margin-bottom: 6px;
-    }
-    .timeline-item .company {
-      color: #c6d4ef;
-      font-weight: 600;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .skill-box {
-      padding: 13px 12px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      text-align: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: #e4edff;
-    }
-
-    .project-card {
-      position: relative;
-      overflow: hidden;
-      min-height: 290px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .project-card::before {
-      content: "";
-      position: absolute;
-      inset: -20% auto auto -20%;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(102,227,255,0.18), transparent 70%);
-      pointer-events: none;
-    }
-    .project-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 14px;
-      position: relative;
-      z-index: 1;
-    }
-    .project-number {
-      font-size: 0.82rem;
-      color: var(--primary);
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-    .project-tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin: 18px 0;
-      position: relative;
-      z-index: 1;
-    }
-    .tag {
-      font-size: 0.78rem;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      color: #d9e8ff;
-    }
-    .project-card p {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cert-list, .contact-list {
-      display: grid;
-      gap: 14px;
-    }
-    .line-item {
-      padding: 16px 18px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-    }
-    .line-item strong { display: block; margin-bottom: 6px; }
-    .line-item span { color: var(--muted); }
-
-    footer {
-      padding: 34px 0 48px;
-      color: var(--muted);
-      text-align: center;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 1100px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thiran Naleendra | Software Engineer</title>
+    <meta
+      name="description"
+      content="Thiran Naleendra - Software Engineer portfolio"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #081120;
+        --bg-soft: #0f1b31;
+        --card: rgba(15, 27, 49, 0.72);
+        --card-strong: #12213b;
+        --text: #e8eefc;
+        --muted: #9fb1d1;
+        --primary: #66e3ff;
+        --secondary: #8b5cf6;
+        --accent: #22c55e;
+        --border: rgba(255, 255, 255, 0.1);
+        --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        --radius: 24px;
+        --max: 1200px;
       }
-      h1 {
-        max-width: none;
-      }
-      .skills-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-    }
 
-    @media (max-width: 860px) {
-      .about-grid,
-      .grid-2,
-      .stats {
-        grid-template-columns: 1fr;
+      * {
+        box-sizing: border-box;
       }
-      .skills-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 720px) {
-      .nav {
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
+      html {
+        scroll-behavior: smooth;
       }
       body {
-        padding-top: 76px;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(102, 227, 255, 0.18),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(139, 92, 246, 0.15),
+            transparent 30%
+          ),
+          linear-gradient(180deg, #06101d 0%, #091425 100%);
+        overflow-x: hidden;
       }
-      .nav-inner {
-        flex-wrap: wrap;
-        justify-content: center;
+
+      a {
+        color: inherit;
+        text-decoration: none;
       }
-      .brand {
-        width: 100%;
-        text-align: center;
-      }
-      .nav-links {
-        gap: 12px;
-        justify-content: center;
-      }
-      .nav-cta {
-        width: 100%;
-        justify-content: center;
-      }
-      .hero {
-        padding-top: 28px;
-      }
-      .hero-copy, .hero-card, .card {
-        padding: 22px;
-      }
-      .hero-copy {
-        padding: 24px;
-      }
-      .hero-card {
-        padding: 24px;
-      }
-      .profile-ring {
-        width: 104px;
-        height: 104px;
-      }
-      .hero-actions {
-        flex-direction: column;
-      }
-      .hero-actions .btn,
-      .project-top .btn {
-        width: 100%;
-      }
-      .section-title {
+      img {
+        max-width: 100%;
         display: block;
       }
-      h1 {
-        font-size: clamp(2.15rem, 11vw, 3.1rem);
-        line-height: 1.04;
-        letter-spacing: -1px;
+      .container {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
       }
-      .hero-copy p {
-        font-size: 0.98rem;
+
+      .bg-orb {
+        position: fixed;
+        width: 520px;
+        height: 520px;
+        border-radius: 50%;
+        filter: blur(70px);
+        opacity: 0.18;
+        z-index: -1;
+        pointer-events: none;
       }
-      .project-top {
+      .orb-1 {
+        background: #3b82f6;
+        top: -120px;
+        left: -100px;
+      }
+      .orb-2 {
+        background: #9333ea;
+        top: 260px;
+        right: -120px;
+      }
+      .orb-3 {
+        background: #10b981;
+        bottom: -140px;
+        left: 30%;
+      }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(16px);
+        background: rgba(8, 17, 32, 0.7);
+        border-bottom: 1px solid var(--border);
+        transition:
+          transform 0.35s ease,
+          background 0.25s ease;
+      }
+      .nav.nav-hidden {
+        transform: translateY(-110%);
+      }
+      .nav.nav-scrolled {
+        background: rgba(8, 17, 32, 0.88);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        gap: 24px;
+      }
+      .brand {
+        font-weight: 800;
+        letter-spacing: 0.3px;
+        font-size: 1.1rem;
+      }
+      .brand span {
+        color: var(--primary);
+      }
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: var(--muted);
+        font-size: 0.95rem;
+        transition: 0.25s ease;
+      }
+      .nav-links a:hover {
+        color: var(--text);
+      }
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px 18px;
+        background: linear-gradient(135deg, var(--primary), #4f8cff);
+        color: #04101e;
+        font-weight: 700;
+        border-radius: 999px;
+        box-shadow: var(--shadow);
+      }
+
+      .hero {
+        padding: 76px 0 40px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+        gap: 26px;
+        align-items: stretch;
+      }
+      .hero-copy,
+      .hero-card {
+        min-height: 100%;
+        display: flex;
         flex-direction: column;
       }
-      .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .hero-copy {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.03)
+        );
+        border: 1px solid var(--border);
+        border-radius: 32px;
+        padding: 38px;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+        justify-content: space-between;
       }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        width: min(var(--max), calc(100% - 20px));
+      .hero-copy::after {
+        content: "";
+        position: absolute;
+        inset: auto -20% -45% auto;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(102, 227, 255, 0.22),
+          transparent 70%
+        );
+      }
+      .hero-main {
+        position: relative;
+        z-index: 1;
+      }
+      .hero-bottom {
+        position: relative;
+        z-index: 1;
+        margin-top: 28px;
       }
       .badge {
-        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        border: 1px solid rgba(102, 227, 255, 0.3);
+        border-radius: 999px;
+        color: var(--primary);
+        background: rgba(102, 227, 255, 0.08);
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      h1 {
+        font-size: clamp(2.4rem, 4vw, 4.7rem);
+        line-height: 1.02;
+        margin: 18px 0 16px;
+        letter-spacing: -1.8px;
+        max-width: 12ch;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #fff, var(--primary), #c084fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero-copy p {
+        color: var(--muted);
+        font-size: 1.03rem;
+        line-height: 1.8;
+        max-width: 62ch;
+        margin: 0;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
         justify-content: center;
-        text-align: center;
+        gap: 10px;
+        padding: 14px 22px;
+        border-radius: 16px;
+        font-weight: 700;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease;
+        border: 1px solid transparent;
       }
-      .skills-grid,
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), #4f8cff);
+        color: #06101d;
+        box-shadow: var(--shadow);
+      }
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.03);
+        border-color: var(--border);
+        color: var(--text);
+      }
+
+      .hero-card {
+        background: linear-gradient(
+          180deg,
+          rgba(19, 32, 58, 0.94),
+          rgba(10, 18, 33, 0.94)
+        );
+        border: 1px solid var(--border);
+        border-radius: 32px;
+        padding: 30px;
+        box-shadow: var(--shadow);
+        position: relative;
+        justify-content: center;
+      }
+      .profile-ring {
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        margin: 0 0 18px;
+        padding: 5px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        box-shadow: 0 16px 30px rgba(80, 132, 255, 0.25);
+      }
+      .profile-ring img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #091425;
+      }
+      .hero-card h2 {
+        margin: 0;
+        font-size: 1.95rem;
+        line-height: 1.1;
+      }
+      .hero-card .role {
+        color: var(--primary);
+        font-weight: 700;
+        margin-top: 8px;
+        margin-bottom: 18px;
+      }
+      .meta-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 14px;
+      }
+      .meta-item {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 0.96rem;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .meta-item:first-child {
+        border-top: 0;
+      }
+      .meta-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--border);
+      }
+
       .stats {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 26px;
       }
-      .skill-box,
       .stat {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+        padding: 20px 18px;
+        border-radius: 20px;
+        text-align: left;
+      }
+      .stat strong {
+        display: block;
+        font-size: 1.35rem;
+        margin-bottom: 8px;
+        color: #fff;
+      }
+      .stat span {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      section {
+        padding: 34px 0;
+      }
+      .section-title {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 24px;
+      }
+      .section-title h3 {
+        margin: 0;
+        font-size: clamp(1.7rem, 2.8vw, 2.6rem);
+      }
+      .section-title p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        max-width: 60ch;
+        line-height: 1.7;
+      }
+
+      .grid {
+        display: grid;
+        gap: 22px;
+      }
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 26px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(12px);
+      }
+      .card h4 {
+        margin: 0 0 10px;
+        font-size: 1.08rem;
+      }
+      .card p,
+      .card li {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+        align-items: stretch;
+      }
+      .about-grid .card {
+        min-height: 100%;
+      }
+
+      .pill-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .pill {
+        padding: 9px 13px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+        color: #dce7ff;
+        font-size: 0.88rem;
+        font-weight: 600;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 22px;
+        position: relative;
+      }
+      .timeline-item {
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 10px;
+        border-left: 2px solid rgba(102, 227, 255, 0.25);
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: 4px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--primary);
+        box-shadow: 0 0 0 6px rgba(102, 227, 255, 0.12);
+      }
+      .timeline-item .date {
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 0.92rem;
+        display: inline-block;
+        margin-bottom: 6px;
+      }
+      .timeline-item .company {
+        color: #c6d4ef;
+        font-weight: 600;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .skill-box {
+        padding: 13px 12px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+        text-align: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: #e4edff;
+      }
+
+      .project-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 290px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .project-card::before {
+        content: "";
+        position: absolute;
+        inset: -20% auto auto -20%;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(102, 227, 255, 0.18),
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .project-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 14px;
+        position: relative;
+        z-index: 1;
+      }
+      .project-number {
+        font-size: 0.82rem;
+        color: var(--primary);
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+      }
+      .project-tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 18px 0;
+        position: relative;
+        z-index: 1;
+      }
+      .tag {
+        font-size: 0.78rem;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border);
+        color: #d9e8ff;
+      }
+      .project-card p {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cert-list,
+      .contact-list {
+        display: grid;
+        gap: 14px;
+      }
+      .line-item {
+        padding: 16px 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+      }
+      .line-item strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+      .line-item span {
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 34px 0 48px;
+        color: var(--muted);
         text-align: center;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-  <div class="bg-orb orb-3"></div>
 
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#home">Thiran<span>.</span></a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <a class="nav-cta" href="mailto:wgthiran@gmail.com">Hire Me</a>
-    </div>
-  </nav>
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-  <main id="home">
-    <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy reveal">
-            <div class="hero-main">
-              <div class="badge">● Available for software engineering opportunities</div>
-              <h1>Building <span class="gradient-text">modern web products</span> with clean backend logic and polished UI.</h1>
-              <p>
-                I am Thiran Naleendra, a Software Engineer with hands-on experience in full-stack web development,
-                ERP/CRM systems, API integration, and software quality assurance. I enjoy building scalable, real-world
-                applications with strong performance, clean architecture, and a great user experience.
-              </p>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="#projects">View Projects</a>
-                <a class="btn btn-secondary" href="https://drive.google.com/file/d/1qBUI156ZOod8xlgIpOdh9HgwDkOMZJAf/view?usp=sharing" target="_blank">Download CV</a>
-              </div>
-            </div>
-            <div class="hero-bottom">
-              <div class="stats">
-                <div class="stat">
-                  <strong>2+</strong>
-                  <span>Years Experience</span>
-                </div>
-                <div class="stat">
-                  <strong>3+</strong>
-                  <span>Live Projects</span>
-                </div>
-                <div class="stat">
-                  <strong>6+</strong>
-                  <span>Certifications</span>
-                </div>
-                <div class="stat">
-                  <strong>Full-Stack</strong>
-                  <span>Laravel Focused</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      .badge-small {
+        display: inline-block;
+        margin-left: 10px;
+        padding: 4px 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        border-radius: 999px;
+        background: rgba(102, 227, 255, 0.12);
+        color: var(--primary);
+        border: 1px solid rgba(102, 227, 255, 0.3);
+        vertical-align: middle;
+      }
 
-          <aside class="hero-card reveal">
-            <div class="profile-ring">
-              <img src="images/t2.jpg" alt="Thiran Naleendra" />
-            </div>
-            <h2>Thiran Naleendra</h2>
-            <div class="role">Software Engineer</div>
-            <ul class="meta-list">
-              <li class="meta-item"><span class="meta-icon">✉</span><span>wgthiran@gmail.com</span></li>
-              <li class="meta-item"><span class="meta-icon">☎</span><span>(+94) 76 965 1875</span></li>
-              <li class="meta-item"><span class="meta-icon">⌂</span><span>Matara, Sri Lanka</span></li>
-              <li class="meta-item"><span class="meta-icon">in</span><span><a href="https://www.linkedin.com/in/thiran-naleendra-4b8b12160/" target="_blank">LinkedIn Profile</a></span></li>
-              <li class="meta-item"><span class="meta-icon">GH</span><span><a href="https://github.com/thiran-naleendra" target="_blank">github.com/thiran-naleendra</a></span></li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <div class="section-title reveal">
-          <div>
-            <h3>About Me</h3>
-            <p>A refreshed portfolio section with stronger positioning for recruiters and clients.</p>
-          </div>
-        </div>
-        <div class="about-grid">
-          <div class="card reveal">
-            <h4>Professional Summary</h4>
-            <p>
-              Motivated and detail-oriented Software Engineer with experience across full-stack web development,
-              business systems, and software testing. I have worked on booking systems, ERP/CRM-related products,
-              payment integrations, admin panels, and scalable application features with a focus on performance,
-              maintainability, and usability.
-            </p>
-            <div class="pill-wrap" style="margin-top:18px;">
-              <span class="pill">Full-Stack Development</span>
-              <span class="pill">API Integration</span>
-              <span class="pill">Laravel</span>
-              <span class="pill">React</span>
-              <span class="pill">Node.js</span>
-              <span class="pill">Business Analysis</span>
-              <span class="pill">Software QA</span>
-              <span class="pill">ERP / CRM</span>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4>Domain Expertise</h4>
-            <p>
-              I build business-focused software solutions with strong backend logic, structured APIs,
-              responsive interfaces, and maintainable systems that support real operational workflows.
-            </p>
-            <div class="pill-wrap" style="margin-top:18px;">
-              <span class="pill">Web Application Development</span>
-              <span class="pill">ERP / CRM Systems</span>
-              <span class="pill">Software Testing & QA</span>
-              <span class="pill">API Development & Integration</span>
-              <span class="pill">Requirement Gathering</span>
-              <span class="pill">Performance Optimization</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="section-title reveal">
-          <div>
-            <h3>Work Experience</h3>
-            <p>My current and previous roles based on the latest CV data.</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="date">Feb 2024 - Present</span>
-              <h4>Junior Software Engineer</h4>
-              <div class="company">Rabbit Solutions (PVT) Ltd</div>
-              <ul>
-                <li>Developed and maintained user interfaces using HTML, CSS, JavaScript, Laravel, and Vue.</li>
-                <li>Designed and implemented backend services using MVC architecture for modularity and maintainability.</li>
-                <li>Created APIs for front-end consumption and managed databases.</li>
-                <li>Collaborated with product teams, participated in code reviews, and contributed to technical documentation.</li>
-                <li>Improved performance and ensured technical feasibility of UI designs.</li>
-              </ul>
-            </div>
-            <div class="timeline-item">
-              <span class="date">Feb 2023 - Feb 2024</span>
-              <h4>Intern Software Engineer</h4>
-              <div class="company">Rabbit Solutions (PVT) Ltd</div>
-              <ul>
-                <li>Contributed to web application development using PHP and SQL Server.</li>
-                <li>Supported client requirements through application configuration.</li>
-                <li>Gained hands-on experience in full-stack development.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="section-title reveal">
-          <div>
-            <h3>Technical Skills</h3>
-            <p>Modern technologies and tools I use to deliver reliable applications.</p>
-          </div>
-        </div>
-        <div class="skills-grid reveal">
-          <div class="skill-box">PHP</div>
-          <div class="skill-box">Laravel</div>
-          <div class="skill-box">JavaScript</div>
-          <div class="skill-box">Vue.js</div>
-          <div class="skill-box">React</div>
-          <div class="skill-box">Node.js</div>
-          <div class="skill-box">MySQL</div>
-          <div class="skill-box">MS SQL</div>
-          <div class="skill-box">MongoDB</div>
-          <div class="skill-box">Firebase</div>
-          <div class="skill-box">HTML / CSS</div>
-          <div class="skill-box">Bootstrap</div>
-          <div class="skill-box">Git / GitLab</div>
-          <div class="skill-box">Figma</div>
-          <div class="skill-box">Java / C#</div>
-          <div class="skill-box">API Integration</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-title reveal">
-          <div>
-            <h3>Featured Projects</h3>
-            <p>Selected projects that showcase full-stack development, payment integration, booking systems, and business-focused solutions.</p>
-          </div>
-        </div>
-        <div class="grid grid-3">
-          <article class="card project-card reveal">
-            <div>
-              <div class="project-top">
-                <div>
-                  <div class="project-number">PROJECT 01</div>
-                  <h4>Melbourne Geotechnical</h4>
-                </div>
-                <a class="btn btn-secondary" href="https://www.melbournegeotech.com.au/" target="_blank">Visit</a>
-              </div>
-              <div class="project-tags">
-                <span class="tag">Laravel</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">Hostinger VPS</span>
-                <span class="tag">JavaScript</span>
-              </div>
-              <p>
-                Developed a full-stack application for site engineers to schedule tasks, provide quotations,
-                and offer consultations. Managed both frontend and backend, and configured VPS hosting.
-              </p>
-            </div>
-          </article>
-
-          <article class="card project-card reveal">
-            <div>
-              <div class="project-top">
-                <div>
-                  <div class="project-number">PROJECT 02</div>
-                  <h4>Barbertime.nz</h4>
-                </div>
-                <a class="btn btn-secondary" href="https://barbertime.co.nz/" target="_blank">Visit</a>
-              </div>
-              <div class="project-tags">
-                <span class="tag">Laravel</span>
-                <span class="tag">Stripe</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">Tailwind / UI</span>
-              </div>
-              <p>
-                Built a full-stack barber booking and management system with appointment booking, product sales,
-                admin panel features, and business-friendly management workflows.
-              </p>
-            </div>
-          </article>
-
-          <article class="card project-card reveal">
-            <div>
-              <div class="project-top">
-                <div>
-                  <div class="project-number">PROJECT 03</div>
-                  <h4>Whale Watching Mirissa</h4>
-                </div>
-                <a class="btn btn-secondary" href="https://booking.whalewatchingmirissa.com/" target="_blank">Visit</a>
-              </div>
-              <div class="project-tags">
-                <span class="tag">Laravel</span>
-                <span class="tag">PHP</span>
-                <span class="tag">PayHere</span>
-                <span class="tag">Admin Panel</span>
-              </div>
-              <p>
-                Developed a complete online whale watching booking platform with secure PayHere integration,
-                pricing management, booking operations, and an admin dashboard for day-to-day control.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="container">
-        <div class="grid grid-2">
-          <div class="card reveal">
-            <div class="section-title" style="margin-bottom:16px;">
-              <div>
-                <h3 style="font-size:1.8rem;">Education</h3>
-              </div>
-            </div>
-            <div class="timeline">
-              <div class="timeline-item">
-                <span class="date">2024 - 2025</span>
-                <h4>BSc (Hons) Software Engineering</h4>
-                <div class="company">Cardiff Metropolitan University (UK)</div>
-              </div>
-              <div class="timeline-item">
-                <span class="date">2022 - 2023</span>
-                <h4>Higher National Diploma in Software Engineering</h4>
-                <div class="company">National Institute of Business Management (NIBM)</div>
-              </div>
-              <div class="timeline-item">
-                <span class="date">2020 - 2021</span>
-                <h4>Diploma in Software Engineering</h4>
-                <div class="company">National Institute of Business Management (NIBM)</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card reveal">
-            <div class="section-title" style="margin-bottom:16px;">
-              <div>
-                <h3 style="font-size:1.8rem;">Certifications</h3>
-              </div>
-            </div>
-            <div class="cert-list">
-              <div class="line-item"><strong>Server-side Web Programming</strong><span>University of Moratuwa • 2023</span></div>
-              <div class="line-item"><strong>Front-End Web Development</strong><span>University of Moratuwa • 2022</span></div>
-              <div class="line-item"><strong>Programming in Python</strong><span>University of Moratuwa • 2023</span></div>
-              <div class="line-item"><strong>JavaScript Essential Training</strong><span>LinkedIn • 2025</span></div>
-              <div class="line-item"><strong>Postman API Fundamentals Student Expert</strong><span>Postman • 2025</span></div>
-              <div class="line-item"><strong>Certified in Cybersecurity (CC) Self-Paced</strong><span>(ISC)2 • 2023</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="section-title reveal">
-          <div>
-            <h3>Let’s Build Something Great</h3>
-            <p>Open to software engineering opportunities, freelance work, and product-focused collaborations.</p>
-          </div>
-        </div>
-        <div class="grid grid-2">
-          <div class="card reveal">
-            <h4>Contact Information</h4>
-            <div class="contact-list">
-              <div class="line-item"><strong>Email</strong><span><a href="mailto:wgthiran@gmail.com">wgthiran@gmail.com</a></span></div>
-              <div class="line-item"><strong>Phone</strong><span><a href="tel:+94769651875">(+94) 76 965 1875</a></span></div>
-              <div class="line-item"><strong>LinkedIn</strong><span><a href="https://www.linkedin.com/in/thiran-naleendra-4b8b12160/" target="_blank">thiran-naleendra-4b8b12160</a></span></div>
-              <div class="line-item"><strong>GitHub</strong><span><a href="https://github.com/thiran-naleendra" target="_blank">thiran-naleendra</a></span></div>
-            </div>
-          </div>
-          <div class="card reveal">
-            <h4>Strengths</h4>
-            <div class="pill-wrap">
-              <span class="pill">Analytical Thinking</span>
-              <span class="pill">Team Management</span>
-              <span class="pill">Interpersonal Skills</span>
-              <span class="pill">Leadership</span>
-              <span class="pill">Quick Learning</span>
-              <span class="pill">Problem Solving</span>
-              <span class="pill">Communication</span>
-              <span class="pill">Collaboration</span>
-            </div>
-            <h4 style="margin-top:24px;">Interests</h4>
-            <div class="pill-wrap">
-              <span class="pill">Travelling</span>
-              <span class="pill">Music</span>
-              <span class="pill">Swimming</span>
-              <span class="pill">Volunteering</span>
-              <span class="pill">Community Services</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Thiran Naleendra • Software Engineer Portfolio
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
+      @media (max-width: 1100px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
         }
-      });
-    }, { threshold: 0.12 });
+        h1 {
+          max-width: none;
+        }
+        .skills-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+      @media (max-width: 860px) {
+        .about-grid,
+        .grid-2,
+        .stats {
+          grid-template-columns: 1fr;
+        }
+        .skills-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
 
-    const nav = document.querySelector('.nav');
-    let lastScrollY = window.scrollY;
+      @media (max-width: 720px) {
+        .nav {
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: 0;
+        }
+        body {
+          padding-top: 76px;
+        }
+        .nav-inner {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .brand {
+          width: 100%;
+          text-align: center;
+        }
+        .nav-links {
+          gap: 12px;
+          justify-content: center;
+        }
+        .nav-cta {
+          width: 100%;
+          justify-content: center;
+        }
+        .hero {
+          padding-top: 28px;
+        }
+        .hero-copy,
+        .hero-card,
+        .card {
+          padding: 22px;
+        }
+        .hero-copy {
+          padding: 24px;
+        }
+        .hero-card {
+          padding: 24px;
+        }
+        .profile-ring {
+          width: 104px;
+          height: 104px;
+        }
+        .hero-actions {
+          flex-direction: column;
+        }
+        .hero-actions .btn,
+        .project-top .btn {
+          width: 100%;
+        }
+        .section-title {
+          display: block;
+        }
+        h1 {
+          font-size: clamp(2.15rem, 11vw, 3.1rem);
+          line-height: 1.04;
+          letter-spacing: -1px;
+        }
+        .hero-copy p {
+          font-size: 0.98rem;
+        }
+        .project-top {
+          flex-direction: column;
+        }
+        .skills-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
 
-    const handleMobileNav = () => {
-      const currentScrollY = window.scrollY;
-      const isMobile = window.innerWidth <= 720;
+      @media (max-width: 480px) {
+        .container {
+          width: min(var(--max), calc(100% - 20px));
+        }
+        .badge {
+          width: 100%;
+          justify-content: center;
+          text-align: center;
+        }
+        .skills-grid,
+        .stats {
+          grid-template-columns: 1fr;
+        }
+        .skill-box,
+        .stat {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
 
-      nav.classList.toggle('nav-scrolled', currentScrollY > 12);
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="#home">Thiran<span>.</span></a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="nav-cta" href="mailto:wgthiran@gmail.com">Hire Me</a>
+      </div>
+    </nav>
 
-      if (!isMobile) {
-        nav.classList.remove('nav-hidden');
+    <main id="home">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy reveal">
+              <div class="hero-main">
+                <div class="badge">
+                  ● Available for software engineering opportunities
+                </div>
+                <h1>
+                  Building
+                  <span class="gradient-text">modern web products</span> with
+                  clean backend logic and polished UI.
+                </h1>
+                <p>
+                  I am Thiran Naleendra, a Software Engineer with hands-on
+                  experience in full-stack web development, ERP/CRM systems, API
+                  integration, and software quality assurance. I enjoy building
+                  scalable, real-world applications with strong performance,
+                  clean architecture, and a great user experience.
+                </p>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="#projects">View Projects</a>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://drive.google.com/file/d/1qBUI156ZOod8xlgIpOdh9HgwDkOMZJAf/view?usp=sharing"
+                    target="_blank"
+                    >Download CV</a
+                  >
+                </div>
+              </div>
+              <div class="hero-bottom">
+                <div class="stats">
+                  <div class="stat">
+                    <strong>3+</strong>
+                    <span>Years Experience</span>
+                  </div>
+                  <div class="stat">
+                    <strong>3+</strong>
+                    <span>Live Projects</span>
+                  </div>
+                  <div class="stat">
+                    <strong>6+</strong>
+                    <span>Certifications</span>
+                  </div>
+                  <div class="stat">
+                    <strong>Full-Stack Engineer</strong>
+                    <span
+                      >Building UI, APIs and backend systems with Laravel, Vue
+                      and PHP</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="hero-card reveal">
+              <div class="profile-ring">
+                <img src="images/t2.jpg" alt="Thiran Naleendra" />
+              </div>
+              <h2>Thiran Naleendra</h2>
+              <div class="role">Software Engineer</div>
+              <ul class="meta-list">
+                <li class="meta-item">
+                  <span class="meta-icon">✉</span
+                  ><span>wgthiran@gmail.com</span>
+                </li>
+                <li class="meta-item">
+                  <span class="meta-icon">☎</span><span>(+94) 76 965 1875</span>
+                </li>
+                <li class="meta-item">
+                  <span class="meta-icon">⌂</span><span>Matara, Sri Lanka</span>
+                </li>
+                <li class="meta-item">
+                  <span class="meta-icon">in</span
+                  ><span
+                    ><a
+                      href="https://www.linkedin.com/in/thiran-naleendra-4b8b12160/"
+                      target="_blank"
+                      >LinkedIn Profile</a
+                    ></span
+                  >
+                </li>
+                <li class="meta-item">
+                  <span class="meta-icon">GH</span
+                  ><span
+                    ><a
+                      href="https://github.com/thiran-naleendra"
+                      target="_blank"
+                      >github.com/thiran-naleendra</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-title reveal">
+            <div>
+              <h3>About Me</h3>
+              <p>
+                A refreshed portfolio section with stronger positioning for
+                recruiters and clients.
+              </p>
+            </div>
+          </div>
+          <div class="about-grid">
+            <div class="card reveal">
+              <h4>Professional Summary</h4>
+              <p>
+                Motivated and detail-oriented Software Engineer with experience
+                across full-stack web development, business systems, and
+                software testing. I have worked on booking systems,
+                ERP/CRM-related products, payment integrations, admin panels,
+                and scalable application features with a focus on performance,
+                maintainability, and usability.
+              </p>
+              <div class="pill-wrap" style="margin-top: 18px">
+                <span class="pill">Full-Stack Development</span>
+                <span class="pill">API Integration</span>
+                <span class="pill">Laravel</span>
+                <span class="pill">React</span>
+                <span class="pill">Node.js</span>
+                <span class="pill">Business Analysis</span>
+                <span class="pill">Software QA</span>
+                <span class="pill">ERP / CRM</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h4>Domain Expertise</h4>
+              <p>
+                I build business-focused software solutions with strong backend
+                logic, structured APIs, responsive interfaces, and maintainable
+                systems that support real operational workflows.
+              </p>
+              <div class="pill-wrap" style="margin-top: 18px">
+                <span class="pill">Web Application Development</span>
+                <span class="pill">ERP / CRM Systems</span>
+                <span class="pill">Software Testing & QA</span>
+                <span class="pill">API Development & Integration</span>
+                <span class="pill">Requirement Gathering</span>
+                <span class="pill">Performance Optimization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="container">
+          <div class="section-title reveal">
+            <div>
+              <h3>Work Experience</h3>
+              <!-- <p>My current and previous roles based on the latest CV data.</p> -->
+            </div>
+          </div>
+
+          <div class="experience-grid">
+            <!-- FULL TIME -->
+            <div class="card reveal">
+              <h4 class="exp-title">Full-Time</h4>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="date">Feb 2024 - Present</span>
+                  <h4>Junior Software Engineer</h4>
+                  <div class="company">Rabbit Solutions (PVT) Ltd</div>
+                  <ul>
+                    <li>
+                      Developed and maintained user interfaces using HTML, CSS,
+                      JavaScript, Laravel, and Vue
+                    </li>
+                    <li>
+                      Designed and implemented backend services using MVC
+                      architecture
+                    </li>
+                    <li>
+                      Created APIs and managed databases for scalable
+                      applications
+                    </li>
+                    <li>
+                      Collaborated with product teams and participated in code
+                      reviews
+                    </li>
+                    <li>
+                      Improved performance and ensured technical feasibility of
+                      UI designs
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="date">Feb 2023 - Feb 2024</span>
+                  <h4>Intern Software Engineer</h4>
+                  <div class="company">Rabbit Solutions (PVT) Ltd</div>
+                  <ul>
+                    <li>
+                      Contributed to web application development using PHP and
+                      SQL Server
+                    </li>
+                    <li>
+                      Supported client requirements through system configuration
+                    </li>
+                    <li>
+                      Gained hands-on experience in full-stack development
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <br />
+            <!-- PART TIME -->
+            <div class="card reveal">
+              <h4 class="exp-title">Part-Time</h4>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="date">Dec 2025 - Present</span>
+                  <h4>Software Engineer / QA & Business Analyst</h4>
+                  <div class="company">Sichrotec Technology Solutions Inc.</div>
+                  <ul>
+                    <li>Performed functional, regression, and API testing</li>
+                    <li>
+                      Designed and maintained test cases and defect workflows
+                    </li>
+                    <li>Supported ERP/CRM requirement documentation</li>
+                    <li>Executed User Acceptance Testing (UAT)</li>
+                    <li>Worked on React, Node.js, and Laravel development</li>
+                    <li>Collaborated with global agile teams</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container">
+          <div class="section-title reveal">
+            <div>
+              <h3>Technical Skills</h3>
+              <p>
+                Modern technologies and tools I use to deliver reliable
+                applications.
+              </p>
+            </div>
+          </div>
+          <div class="skills-grid reveal">
+            <div class="skill-box">PHP</div>
+            <div class="skill-box">Laravel</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Vue.js</div>
+            <div class="skill-box">React</div>
+            <div class="skill-box">Node.js</div>
+            <div class="skill-box">MySQL</div>
+            <div class="skill-box">MS SQL</div>
+            <div class="skill-box">MongoDB</div>
+            <div class="skill-box">Firebase</div>
+            <div class="skill-box">HTML / CSS</div>
+            <div class="skill-box">Bootstrap</div>
+            <div class="skill-box">Git / GitLab</div>
+            <div class="skill-box">Figma</div>
+            <div class="skill-box">Java / C#</div>
+            <div class="skill-box">API Integration</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <div class="section-title reveal">
+            <div>
+              <h3>Featured Projects</h3>
+              <p>
+                Selected projects that showcase full-stack development, payment
+                integration, booking systems, and business-focused solutions.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-3">
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 01</div>
+                    <h4>Melbourne Geotechnical</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://www.melbournegeotech.com.au/"
+                    target="_blank"
+                    >Visit</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">Hostinger VPS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <p>
+                  Developed a full-stack application for site engineers to
+                  schedule tasks, provide quotations, and offer consultations.
+                  Managed both frontend and backend, and configured VPS hosting.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 02</div>
+                    <h4>Barbertime.nz</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://barbertime.co.nz/"
+                    target="_blank"
+                    >Visit</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">Stripe</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">Tailwind / UI</span>
+                </div>
+                <p>
+                  Built a full-stack barber booking and management system with
+                  appointment booking, product sales, admin panel features, and
+                  business-friendly management workflows.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 03</div>
+                    <h4>Whale Watching Mirissa</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://booking.whalewatchingmirissa.com/"
+                    target="_blank"
+                    >Visit</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">PayHere</span>
+                  <span class="tag">Admin Panel</span>
+                </div>
+                <p>
+                  Developed a complete online whale watching booking platform
+                  with secure PayHere integration, pricing management, booking
+                  operations, and an admin dashboard for day-to-day control.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="container">
+          <div class="grid grid-2">
+            <div class="card reveal">
+              <div class="section-title" style="margin-bottom: 16px">
+                <div>
+                  <h3 style="font-size: 1.8rem">Education</h3>
+                </div>
+              </div>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="date">2024 - 2025</span>
+                  <h4>BSc (Hons) Software Engineering</h4>
+                  <div class="company">
+                    Cardiff Metropolitan University (UK)
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="date">2022 - 2023</span>
+                  <h4>Higher National Diploma in Software Engineering</h4>
+                  <div class="company">
+                    National Institute of Business Management (NIBM)
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="date">2020 - 2021</span>
+                  <h4>Diploma in Software Engineering</h4>
+                  <div class="company">
+                    National Institute of Business Management (NIBM)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card reveal">
+              <div class="section-title" style="margin-bottom: 16px">
+                <div>
+                  <h3 style="font-size: 1.8rem">Certifications</h3>
+                </div>
+              </div>
+              <div class="cert-list">
+                <div class="line-item">
+                  <strong>Server-side Web Programming</strong
+                  ><span>University of Moratuwa • 2023</span>
+                </div>
+                <div class="line-item">
+                  <strong>Front-End Web Development</strong
+                  ><span>University of Moratuwa • 2022</span>
+                </div>
+                <div class="line-item">
+                  <strong>Programming in Python</strong
+                  ><span>University of Moratuwa • 2023</span>
+                </div>
+                <div class="line-item">
+                  <strong>JavaScript Essential Training</strong
+                  ><span>LinkedIn • 2025</span>
+                </div>
+                <div class="line-item">
+                  <strong>Postman API Fundamentals Student Expert</strong
+                  ><span>Postman • 2025</span>
+                </div>
+                <div class="line-item">
+                  <strong>Certified in Cybersecurity (CC) Self-Paced</strong
+                  ><span>(ISC)2 • 2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="section-title reveal">
+            <div>
+              <h3>Let’s Build Something Great</h3>
+              <p>
+                Open to software engineering opportunities, freelance work, and
+                product-focused collaborations.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-2">
+            <div class="card reveal">
+              <h4>Contact Information</h4>
+              <div class="contact-list">
+                <div class="line-item">
+                  <strong>Email</strong
+                  ><span
+                    ><a href="mailto:wgthiran@gmail.com"
+                      >wgthiran@gmail.com</a
+                    ></span
+                  >
+                </div>
+                <div class="line-item">
+                  <strong>Phone</strong
+                  ><span><a href="tel:+94769651875">(+94) 76 965 1875</a></span>
+                </div>
+                <div class="line-item">
+                  <strong>LinkedIn</strong
+                  ><span
+                    ><a
+                      href="https://www.linkedin.com/in/thiran-naleendra-4b8b12160/"
+                      target="_blank"
+                      >thiran-naleendra-4b8b12160</a
+                    ></span
+                  >
+                </div>
+                <div class="line-item">
+                  <strong>GitHub</strong
+                  ><span
+                    ><a
+                      href="https://github.com/thiran-naleendra"
+                      target="_blank"
+                      >thiran-naleendra</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h4>Strengths</h4>
+              <div class="pill-wrap">
+                <span class="pill">Analytical Thinking</span>
+                <span class="pill">Team Management</span>
+                <span class="pill">Interpersonal Skills</span>
+                <span class="pill">Leadership</span>
+                <span class="pill">Quick Learning</span>
+                <span class="pill">Problem Solving</span>
+                <span class="pill">Communication</span>
+                <span class="pill">Collaboration</span>
+              </div>
+              <h4 style="margin-top: 24px">Interests</h4>
+              <div class="pill-wrap">
+                <span class="pill">Travelling</span>
+                <span class="pill">Music</span>
+                <span class="pill">Swimming</span>
+                <span class="pill">Volunteering</span>
+                <span class="pill">Community Services</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© <span id="year"></span> Thiran Naleendra</div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      const nav = document.querySelector(".nav");
+      let lastScrollY = window.scrollY;
+
+      const handleMobileNav = () => {
+        const currentScrollY = window.scrollY;
+        const isMobile = window.innerWidth <= 720;
+
+        nav.classList.toggle("nav-scrolled", currentScrollY > 12);
+
+        if (!isMobile) {
+          nav.classList.remove("nav-hidden");
+          lastScrollY = currentScrollY;
+          return;
+        }
+
+        if (currentScrollY <= 10) {
+          nav.classList.remove("nav-hidden");
+        } else if (currentScrollY > lastScrollY + 8) {
+          nav.classList.add("nav-hidden");
+        } else if (currentScrollY < lastScrollY - 8) {
+          nav.classList.remove("nav-hidden");
+        }
+
         lastScrollY = currentScrollY;
-        return;
-      }
+      };
 
-      if (currentScrollY <= 10) {
-        nav.classList.remove('nav-hidden');
-      } else if (currentScrollY > lastScrollY + 8) {
-        nav.classList.add('nav-hidden');
-      } else if (currentScrollY < lastScrollY - 8) {
-        nav.classList.remove('nav-hidden');
-      }
-
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener('scroll', handleMobileNav, { passive: true });
-    window.addEventListener('resize', handleMobileNav);
-    handleMobileNav();
-  </script>
-</body>
+      window.addEventListener("scroll", handleMobileNav, { passive: true });
+      window.addEventListener("resize", handleMobileNav);
+      handleMobileNav();
+    </script>
+  </body>
 </html>
