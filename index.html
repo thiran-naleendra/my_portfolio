@@ -497,6 +497,9 @@
         flex-direction: column;
         justify-content: space-between;
       }
+      .project-card.featured {
+        grid-column: 1 / -1;
+      }
       .project-card::before {
         content: "";
         position: absolute;
@@ -518,6 +521,25 @@
         gap: 14px;
         position: relative;
         z-index: 1;
+      }
+      .project-top.with-actions {
+        display: block;
+      }
+      .project-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 16px;
+      }
+      .project-actions .btn {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+      .project-actions .btn:first-child {
+        grid-column: 1 / -1;
       }
       .project-number {
         font-size: 0.82rem;
@@ -793,7 +815,7 @@
                     <span>Years Experience</span>
                   </div>
                   <div class="stat">
-                    <strong>6+</strong>
+                    <strong>7+</strong>
                     <span>Live Projects</span>
                   </div>
                   <div class="stat">
@@ -927,24 +949,28 @@
                   <div class="company">Rabbit Solutions (PVT) Ltd</div>
                   <ul>
                     <li>
-                      Developed and maintained user interfaces using HTML, CSS,
-                      JavaScript, Laravel, and Vue
+                      Developed and maintained scalable web applications using
+                      Laravel, Vue.js, JavaScript, HTML, CSS, and MySQL
                     </li>
                     <li>
-                      Designed and implemented backend services using MVC
-                      architecture
+                      Designed and implemented backend services following MVC
+                      architecture to improve maintainability and scalability
                     </li>
                     <li>
-                      Created APIs and managed databases for scalable
-                      applications
+                      Built and integrated RESTful APIs for frontend and
+                      third-party integrations
                     </li>
                     <li>
-                      Collaborated with product teams and participated in code
-                      reviews
+                      Collaborated with QA, UI/UX, and product teams to deliver
+                      production-ready software solutions
                     </li>
                     <li>
-                      Improved performance and ensured technical feasibility of
-                      UI designs
+                      Optimized application performance, frontend
+                      responsiveness, and database operations
+                    </li>
+                    <li>
+                      Participated in debugging, code reviews, deployment
+                      activities, and technical documentation
                     </li>
                   </ul>
                 </div>
@@ -955,14 +981,20 @@
                   <div class="company">Rabbit Solutions (PVT) Ltd</div>
                   <ul>
                     <li>
-                      Contributed to web application development using PHP and
-                      SQL Server
+                      Contributed to full-stack web application development
+                      using PHP, Laravel, SQL Server, HTML, CSS, and JavaScript
                     </li>
                     <li>
-                      Supported client requirements through system configuration
+                      Assisted in application configuration, debugging, and
+                      client support activities
                     </li>
                     <li>
-                      Gained hands-on experience in full-stack development
+                      Worked with development teams to implement new features
+                      and improve system functionality
+                    </li>
+                    <li>
+                      Gained hands-on experience in backend development,
+                      database management, and software deployment workflows
                     </li>
                   </ul>
                 </div>
@@ -1109,204 +1141,11 @@
             </div>
           </div>
           <div class="grid grid-3">
-            <article class="card project-card reveal">
+            <article class="card project-card featured reveal">
               <div>
                 <div class="project-top">
                   <div>
                     <div class="project-number">PROJECT 01</div>
-                    <h4>Crown Motors</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://crownmotors.nz/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                  <a
-                    class="btn btn-secondary"
-                    href="https://github.com/thiran-naleendra/crown-motors.git"
-                    target="_blank"
-                    rel="noopener"
-                    >Github</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">React</span>
-                  <span class="tag">TypeScript</span>
-                  <span class="tag">Tailwind CSS</span>
-                  <span class="tag">Cloudflare</span>
-                </div>
-                <p>
-                  Responsive business website for a New Zealand customer with a
-                  custom domain, Cloudflare DNS, SSL, and hosting configuration.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 02</div>
-                    <h4>Sri Soul Ventures</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://srisoulventures.com/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">PHP</span>
-                  <span class="tag">Tailwind CSS</span>
-                  <span class="tag">Tourism</span>
-                  <span class="tag">Responsive UI</span>
-                </div>
-                <p>
-                  Tourism website for curated Sri Lankan travel packages,
-                  destination highlights, contact information, and a
-                  brand-focused visitor experience.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 03</div>
-                    <h4>Pearl Lanka Tours</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://pearllankatours.lk/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">PHP</span>
-                  <span class="tag">Tailwind CSS</span>
-                  <span class="tag">Tourism</span>
-                  <span class="tag">Responsive UI</span>
-                </div>
-                <p>
-                  Tourism website for Sri Lanka tours, safaris, beach trips,
-                  cultural experiences, destination browsing, and direct tour
-                  booking inquiries.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 04</div>
-                    <h4>Whale Watching Mirissa</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://whalewatchingmirissa.com/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">PHP</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">PayHere</span>
-                </div>
-                <p>
-                  Tourism website and booking platform with online
-                  reservations, payment gateway, admin panel, and SEO-friendly
-                  design.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 05</div>
-                    <h4>Melbourne Geotech</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://www.melbournegeotech.com.au/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                  <a
-                    class="btn btn-secondary"
-                    href="https://github.com/thiran-naleendra/admin_panel.git"
-                    target="_blank"
-                    rel="noopener"
-                    >Github</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">PHP</span>
-                  <span class="tag">MySQL</span>
-                  <span class="tag">VPS</span>
-                </div>
-                <p>
-                  Full-stack engineering system with scheduling, quotations,
-                  consultations, VPS hosting, and domain configuration.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 06</div>
-                    <h4>Barbertime.nz</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://barbertime.co.nz/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                  <a
-                    class="btn btn-secondary"
-                    href="https://github.com/thiran-naleendra/barbertime.co.nz.git"
-                    target="_blank"
-                    rel="noopener"
-                    >Github</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">Stripe</span>
-                  <span class="tag">MySQL</span>
-                  <span class="tag">Tailwind / UI</span>
-                </div>
-                <p>
-                  Built a full-stack barber booking and management system with
-                  appointment booking, product sales, admin panel features, and
-                  business-friendly management workflows.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 07</div>
                     <h4>Inventory &amp; Invoice Management System</h4>
                   </div>
                 </div>
@@ -1345,6 +1184,253 @@
                 </div>
               </div>
             </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 02</div>
+                    <h4>Crown Motors</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://crownmotors.nz/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                  <a
+                    class="btn btn-secondary"
+                    href="https://github.com/thiran-naleendra/crown-motors.git"
+                    target="_blank"
+                    rel="noopener"
+                    >Github</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Tailwind CSS</span>
+                  <span class="tag">Cloudflare</span>
+                </div>
+                <p>
+                  Responsive business website for a New Zealand customer with a
+                  custom domain, Cloudflare DNS, SSL, and hosting configuration.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 03</div>
+                    <h4>Melbourne Geotech</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://www.melbournegeotech.com.au/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                  <a
+                    class="btn btn-secondary"
+                    href="https://github.com/thiran-naleendra/admin_panel.git"
+                    target="_blank"
+                    rel="noopener"
+                    >Github</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">VPS</span>
+                </div>
+                <p>
+                  Full-stack engineering system with scheduling, quotations,
+                  consultations, VPS hosting, and domain configuration.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 04</div>
+                    <h4>Sri Soul Ventures</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://srisoulventures.com/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">PHP</span>
+                  <span class="tag">Tailwind CSS</span>
+                  <span class="tag">Tourism</span>
+                  <span class="tag">Responsive UI</span>
+                </div>
+                <p>
+                  Tourism website for curated Sri Lankan travel packages,
+                  destination highlights, contact information, and a
+                  brand-focused visitor experience.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 05</div>
+                    <h4>Pearl Lanka Tours</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://pearllankatours.lk/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">PHP</span>
+                  <span class="tag">Tailwind CSS</span>
+                  <span class="tag">Tourism</span>
+                  <span class="tag">Responsive UI</span>
+                </div>
+                <p>
+                  Tourism website for Sri Lanka tours, safaris, beach trips,
+                  cultural experiences, destination browsing, and direct tour
+                  booking inquiries.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top with-actions">
+                  <div>
+                    <div class="project-number">PROJECT 06</div>
+                    <h4>Whale Watching Mirissa</h4>
+                  </div>
+                  <div class="project-actions">
+                    <a
+                      class="btn btn-secondary"
+                      href="https://whalewatchingmirissa.com/"
+                      target="_blank"
+                      rel="noopener"
+                      >Visit</a
+                    >
+                    <a
+                      class="btn btn-secondary"
+                      href="https://github.com/thiran-naleendra/whale_watching_mirissa.git"
+                      target="_blank"
+                      rel="noopener"
+                      >Frontend Github</a
+                    >
+                    <a
+                      class="btn btn-secondary"
+                      href="https://github.com/thiran-naleendra/whale_bookig_mirissa.git"
+                      target="_blank"
+                      rel="noopener"
+                      >Booking Github</a
+                    >
+                  </div>
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">PayHere</span>
+                  <span class="tag">Admin Panel</span>
+                </div>
+                <p>
+                  Tourism frontend website and booking platform with online
+                  reservations, PayHere payment gateway integration, and an
+                  admin panel for managing bookings and operations.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 07</div>
+                    <h4>Barbertime.nz</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://barbertime.co.nz/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                  <a
+                    class="btn btn-secondary"
+                    href="https://github.com/thiran-naleendra/barbertime.co.nz.git"
+                    target="_blank"
+                    rel="noopener"
+                    >Github</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">Stripe</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">Tailwind / UI</span>
+                </div>
+                <p>
+                  Built a full-stack barber booking and management system with
+                  appointment booking, product sales, admin panel features, and
+                  business-friendly management workflows.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 08</div>
+                    <h4>Lakindu Tours</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://www.srilankacardriver.com/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                  <a
+                    class="btn btn-secondary"
+                    href="https://github.com/thiran-naleendra/Lakindu_Tours.git"
+                    target="_blank"
+                    rel="noopener"
+                    >Github</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Vue.js</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Admin Panel</span>
+                  <span class="tag">Tourism</span>
+                </div>
+                <p>
+                  Tourism website and admin panel for showcasing Sri Lankan
+                  tours, driver services, destinations, and managing website
+                  content and customer inquiries.
+                </p>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
