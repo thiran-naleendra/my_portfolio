@@ -8,6 +8,7 @@
       name="description"
       content="Thiran Naleendra - Software Engineer portfolio"
     />
+    <link rel="icon" type="image/png" href="images/TN.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -545,6 +546,25 @@
         position: relative;
         z-index: 1;
       }
+      .project-meta {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: var(--primary);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+      .project-features {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px 20px;
+        margin: 16px 0 0;
+        padding-left: 18px;
+        position: relative;
+        z-index: 1;
+      }
+      .project-features li {
+        font-size: 0.86rem;
+      }
 
       .cert-list,
       .contact-list {
@@ -687,6 +707,9 @@
         .project-top {
           flex-direction: column;
         }
+        .project-features {
+          grid-template-columns: 1fr;
+        }
         .skills-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -757,7 +780,7 @@
                   <a class="btn btn-primary" href="#projects">View Projects</a>
                   <a
                     class="btn btn-secondary"
-                    href="https://drive.google.com/file/d/1qBUI156ZOod8xlgIpOdh9HgwDkOMZJAf/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1-7tTvqoeJaAmo6kqXoiekiU3Y1Xx8v-D/view?usp=sharing"
                     target="_blank"
                     >Download CV</a
                   >
@@ -770,7 +793,7 @@
                     <span>Years Experience</span>
                   </div>
                   <div class="stat">
-                    <strong>3+</strong>
+                    <strong>6+</strong>
                     <span>Live Projects</span>
                   </div>
                   <div class="stat">
@@ -971,185 +994,6 @@
         </div>
       </section>
 
-      <section id="skills">
-        <div class="container">
-          <div class="section-title reveal">
-            <div>
-              <h3>Technical Skills</h3>
-              <!-- <p>
-                Modern technologies and tools I use to deliver reliable
-                applications.
-              </p> -->
-            </div>
-          </div>
-          <div class="skills-grid reveal">
-            <div class="skill-box">PHP</div>
-            <div class="skill-box">Laravel</div>
-            <div class="skill-box">JavaScript</div>
-            <div class="skill-box">Vue.js</div>
-            <div class="skill-box">React</div>
-            <div class="skill-box">Node.js</div>
-            <div class="skill-box">MySQL</div>
-            <div class="skill-box">MS SQL</div>
-            <div class="skill-box">MongoDB</div>
-            <div class="skill-box">Firebase</div>
-            <div class="skill-box">HTML / CSS</div>
-            <div class="skill-box">Bootstrap</div>
-            <div class="skill-box">Git / GitLab</div>
-            <div class="skill-box">Figma</div>
-            <div class="skill-box">Java / C#</div>
-            <div class="skill-box">API Integration</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects">
-        <div class="container">
-          <div class="section-title reveal">
-            <div>
-              <h3>Featured Projects</h3>
-              <!-- <p>
-                Selected projects that showcase full-stack development, payment
-                integration, booking systems, and business-focused solutions.
-              </p> -->
-            </div>
-          </div>
-          <div class="grid grid-3"> 
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 01</div>
-                    <h4>Crown Motors Website</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://crownmotors.nz/"
-                    target="_blank"
-                    >Visit</a
-                  >
-                  <a
-                    class="btn btn-secondary"
-                    href="https://github.com/thiran-naleendra/crown-motors.git"
-                    target="_blank"
-                    >Github</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">React</span>
-                  <span class="tag">TypeScript</span>
-                  <span class="tag">TypeScript</span>
-                  <span class="tag">Tailwind CSS</span>
-                  <span class="tag">Cloudflare</span>
-                </div>
-                <p>
-                  Developed and deployed a responsive business website for a New Zealand-based customer, 
-                  Crown Motors. Built the site using React, TypeScript, Vite, and Tailwind CSS with pages for home, 
-                  about, services, and contact. Configured production routing support, 
-                  connected the custom .nz domain, and used Cloudflare for DNS, SSL/HTTPS, 
-                  performance, and basic security protection
-                </p>
-              </div>
-            </article>
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 01</div>
-                    <h4>Melbourne Geotechnical</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://www.melbournegeotech.com.au/"
-                    target="_blank"
-                    >Visit</a
-                  >
-                  <a
-                    class="btn btn-secondary"
-                    href="https://github.com/thiran-naleendra/admin_panel.git"
-                    target="_blank"
-                    >Github</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">MySQL</span>
-                  <span class="tag">Hostinger VPS</span>
-                  <span class="tag">JavaScript</span>
-                </div>
-                <p>
-                  Developed a full-stack application for site engineers to
-                  schedule tasks, provide quotations, and offer consultations.
-                  Managed both frontend and backend, and configured VPS hosting.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 02</div>
-                    <h4>Barbertime.nz</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://barbertime.co.nz/"
-                    target="_blank"
-                    >Visit</a
-                  >
-                  <a
-                    class="btn btn-secondary"
-                    href="https://github.com/thiran-naleendra/barbertime.co.nz.git"
-                    target="_blank"
-                    >Github</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">Stripe</span>
-                  <span class="tag">MySQL</span>
-                  <span class="tag">Tailwind / UI</span>
-                </div>
-                <p>
-                  Built a full-stack barber booking and management system with
-                  appointment booking, product sales, admin panel features, and
-                  business-friendly management workflows.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 03</div>
-                    <h4>Whale Watching Mirissa</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://booking.whalewatchingmirissa.com/"
-                    target="_blank"
-                    >Visit</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">PHP</span>
-                  <span class="tag">PayHere</span>
-                  <span class="tag">Admin Panel</span>
-                </div>
-                <p>
-                  Developed a complete online whale watching booking platform
-                  with secure PayHere integration, pricing management, booking
-                  operations, and an admin dashboard for day-to-day control.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="education">
         <div class="container">
           <div class="grid grid-2">
@@ -1217,6 +1061,290 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container">
+          <div class="section-title reveal">
+            <div>
+              <h3>Technical Skills</h3>
+              <!-- <p>
+                Modern technologies and tools I use to deliver reliable
+                applications.
+              </p> -->
+            </div>
+          </div>
+          <div class="skills-grid reveal">
+            <div class="skill-box">PHP</div>
+            <div class="skill-box">Laravel</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Vue.js</div>
+            <div class="skill-box">React</div>
+            <div class="skill-box">Node.js</div>
+            <div class="skill-box">MySQL</div>
+            <div class="skill-box">MS SQL</div>
+            <div class="skill-box">MongoDB</div>
+            <div class="skill-box">Firebase</div>
+            <div class="skill-box">HTML / CSS</div>
+            <div class="skill-box">Bootstrap</div>
+            <div class="skill-box">Git / GitLab</div>
+            <div class="skill-box">Figma</div>
+            <div class="skill-box">Java / C#</div>
+            <div class="skill-box">API Integration</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <div class="section-title reveal">
+            <div>
+              <h3>Featured Projects</h3>
+              <!-- <p>
+                Selected projects that showcase full-stack development, payment
+                integration, booking systems, and business-focused solutions.
+              </p> -->
+            </div>
+          </div>
+          <div class="grid grid-3">
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 01</div>
+                    <h4>Crown Motors</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://crownmotors.nz/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                  <a
+                    class="btn btn-secondary"
+                    href="https://github.com/thiran-naleendra/crown-motors.git"
+                    target="_blank"
+                    rel="noopener"
+                    >Github</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Tailwind CSS</span>
+                  <span class="tag">Cloudflare</span>
+                </div>
+                <p>
+                  Responsive business website for a New Zealand customer with a
+                  custom domain, Cloudflare DNS, SSL, and hosting configuration.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 02</div>
+                    <h4>Sri Soul Ventures</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://srisoulventures.com/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">PHP</span>
+                  <span class="tag">Tailwind CSS</span>
+                  <span class="tag">Tourism</span>
+                  <span class="tag">Responsive UI</span>
+                </div>
+                <p>
+                  Tourism website for curated Sri Lankan travel packages,
+                  destination highlights, contact information, and a
+                  brand-focused visitor experience.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 03</div>
+                    <h4>Pearl Lanka Tours</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://pearllankatours.lk/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">PHP</span>
+                  <span class="tag">Tailwind CSS</span>
+                  <span class="tag">Tourism</span>
+                  <span class="tag">Responsive UI</span>
+                </div>
+                <p>
+                  Tourism website for Sri Lanka tours, safaris, beach trips,
+                  cultural experiences, destination browsing, and direct tour
+                  booking inquiries.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 04</div>
+                    <h4>Whale Watching Mirissa</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://whalewatchingmirissa.com/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">PayHere</span>
+                </div>
+                <p>
+                  Tourism website and booking platform with online
+                  reservations, payment gateway, admin panel, and SEO-friendly
+                  design.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 05</div>
+                    <h4>Melbourne Geotech</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://www.melbournegeotech.com.au/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                  <a
+                    class="btn btn-secondary"
+                    href="https://github.com/thiran-naleendra/admin_panel.git"
+                    target="_blank"
+                    rel="noopener"
+                    >Github</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">VPS</span>
+                </div>
+                <p>
+                  Full-stack engineering system with scheduling, quotations,
+                  consultations, VPS hosting, and domain configuration.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 06</div>
+                    <h4>Barbertime.nz</h4>
+                  </div>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://barbertime.co.nz/"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit</a
+                  >
+                  <a
+                    class="btn btn-secondary"
+                    href="https://github.com/thiran-naleendra/barbertime.co.nz.git"
+                    target="_blank"
+                    rel="noopener"
+                    >Github</a
+                  >
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">Stripe</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">Tailwind / UI</span>
+                </div>
+                <p>
+                  Built a full-stack barber booking and management system with
+                  appointment booking, product sales, admin panel features, and
+                  business-friendly management workflows.
+                </p>
+              </div>
+            </article>
+
+            <article class="card project-card reveal">
+              <div>
+                <div class="project-top">
+                  <div>
+                    <div class="project-number">PROJECT 07</div>
+                    <h4>Inventory &amp; Invoice Management System</h4>
+                  </div>
+                </div>
+                <span class="project-meta">Nov 2025 - Feb 2026</span>
+                <p>
+                  Laravel-based business management platform for product
+                  management, stock tracking, invoice generation, warranty
+                  handling, returns, and service note management with
+                  transactional data integrity.
+                </p>
+                <ul
+                  class="project-features"
+                  aria-label="Inventory and invoice system key features"
+                >
+                  <li>Secure Laravel Auth login</li>
+                  <li>Central dashboard with alerts</li>
+                  <li>Inventory and stock management</li>
+                  <li>Multi-item invoice generation</li>
+                  <li>Real-time stock validation</li>
+                  <li>Warranty and serial tracking</li>
+                  <li>Searchable customer selection</li>
+                  <li>Product, return, and service modules</li>
+                </ul>
+                <div class="project-tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">Blade</span>
+                  <span class="tag">jQuery</span>
+                  <span class="tag">Bootstrap</span>
+                  <span class="tag">Select2</span>
+                  <span class="tag">DataTables</span>
+                  <span class="tag">Eloquent ORM</span>
+                  <span class="tag">REST APIs</span>
+                  <span class="tag">Database Design</span>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
