@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thiran-naleendra.github.io/my_portfolio/sitemap.xml

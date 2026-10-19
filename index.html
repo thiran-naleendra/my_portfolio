@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thiran Naleendra | Software Engineer</title>
+    <title>Thiran Naleendra | Full-Stack Software Engineer</title>
     <meta
       name="description"
-      content="Thiran Naleendra - Software Engineer portfolio"
+      content="Explore Thiran Naleendra's software engineering portfolio featuring Laravel applications, REST APIs, booking platforms, inventory management systems, and modern web development projects."
     />
     <link rel="icon" type="image/png" href="images/TN.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -756,29 +756,47 @@
         }
       }
     </style>
+    <link rel="canonical" href="https://thiran-naleendra.github.io/my_portfolio/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Thiran Naleendra | Full-Stack Software Engineer" />
+    <meta property="og:description" content="Laravel applications, REST APIs, booking platforms and modern web development projects." />
+    <meta property="og:url" content="https://thiran-naleendra.github.io/my_portfolio/" />
+    <meta property="og:image" content="https://thiran-naleendra.github.io/my_portfolio/images/t2.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Thiran Naleendra | Full-Stack Software Engineer" />
+    <meta name="twitter:description" content="Full-stack development, Laravel applications and business software." />
+    <meta name="twitter:image" content="https://thiran-naleendra.github.io/my_portfolio/images/t2.jpg" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Thiran Naleendra", "jobTitle": "Full-Stack Software Engineer", "url": "https://thiran-naleendra.github.io/my_portfolio/", "email": "mailto:wgthiran@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Matara", "addressCountry": "LK"}, "sameAs": ["https://github.com/thiran-naleendra", "https://www.linkedin.com/in/thiran-naleendra-4b8b12160/"]}</script>
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <script src="js/projects.js" defer></script>
+    <script src="js/portfolio.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="bg-orb orb-1"></div>
     <div class="bg-orb orb-2"></div>
     <div class="bg-orb orb-3"></div>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
       <div class="container nav-inner">
         <a class="brand" href="#home">Thiran<span>.</span></a>
-        <div class="nav-links">
+        <button class="menu-toggle btn btn-secondary" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+        <div class="nav-links" id="navigation">
+          <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#education">Education</a>
+          <a href="#certifications">Certifications</a>
           <a href="#contact">Contact</a>
         </div>
         <a class="nav-cta" href="mailto:wgthiran@gmail.com">Hire Me</a>
       </div>
     </nav>
 
-    <main id="home">
-      <section class="hero">
+    <main id="main-content">
+      <section class="hero" id="home">
         <div class="container">
           <div class="hero-grid">
             <div class="hero-copy reveal">
@@ -786,59 +804,36 @@
                 <div class="badge">
                   ● Available for software engineering opportunities
                 </div>
-                <h1>
-                  Building
-                  <span class="gradient-text">modern web products</span> with
-                  clean backend logic and polished UI.
-                </h1>
-                <p>
-                  I am Thiran Naleendra, a Software Engineer with hands-on
-                  experience in full-stack web development, ERP/CRM systems, API
-                  integration, and software quality assurance. I enjoy building
-                  scalable, real-world applications with strong performance,
-                  clean architecture, and a great user experience.
-                </p>
+                <h1>Hi, I'm <span class="gradient-text">Thiran Naleendra</span></h1>
+                <p class="hero-role">Full-Stack Software Engineer</p>
+                <p class="hero-tagline">Building Scalable Web Applications &amp; Smart Business Solutions</p>
+                <p>I'm a Full-Stack Software Engineer specializing in Laravel, PHP, MySQL, REST APIs, and modern frontend development. I design, build, test, and deploy reliable web applications that solve real-world business problems.</p>
                 <div class="hero-actions">
-                  <a class="btn btn-primary" href="#projects">View Projects</a>
+                  <a class="btn btn-primary" href="#projects">View My Projects</a>
                   <a
                     class="btn btn-secondary"
                     href="https://drive.google.com/file/d/1-7tTvqoeJaAmo6kqXoiekiU3Y1Xx8v-D/view?usp=sharing"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     >Download CV</a
                   >
+                <a class="btn btn-secondary" href="#contact">Contact Me</a>
+                  <a class="btn btn-secondary" href="https://github.com/thiran-naleendra" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
               </div>
               <div class="hero-bottom">
                 <div class="stats">
-                  <div class="stat">
-                    <strong>3+</strong>
-                    <span>Years Experience</span>
-                  </div>
-                  <div class="stat">
-                    <strong>7+</strong>
-                    <span>Live Projects</span>
-                  </div>
-                  <div class="stat">
-                    <strong>6+</strong>
-                    <span>Certifications</span>
-                  </div>
-                  <div class="stat">
-                    <strong>Full-Stack Engineer</strong>
-                    <span
-                      >Building UI, APIs and backend systems with Laravel, Vue
-                      and PHP</span
-                    >
-                  </div>
+                  <div class="stat"><strong id="experience-count">Since Feb 20, 2023</strong><span>Years of Experience</span></div>
+                  <div class="stat"><strong id="project-count">19</strong><span>Projects, including demos &amp; work in development</span></div>
+                  <div class="stat"><strong id="certification-count">6</strong><span>Certifications</span></div>
                 </div>
               </div>
             </div>
-
             <aside class="hero-card reveal">
               <div class="profile-ring">
-                <img src="images/t2.jpg" alt="Thiran Naleendra" />
+                <img src="images/t2.jpg" alt="Portrait of Thiran Naleendra" width="132" height="132" fetchpriority="high" />
               </div>
               <h2>Thiran Naleendra</h2>
-              <div class="role">Software Engineer</div>
+              <div class="role">Full-Stack Software Engineer</div>
               <ul class="meta-list">
                 <li class="meta-item">
                   <span class="meta-icon">✉</span
@@ -855,7 +850,7 @@
                   ><span
                     ><a
                       href="https://www.linkedin.com/in/thiran-naleendra-4b8b12160/"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       >LinkedIn Profile</a
                     ></span
                   >
@@ -865,7 +860,7 @@
                   ><span
                     ><a
                       href="https://github.com/thiran-naleendra"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       >github.com/thiran-naleendra</a
                     ></span
                   >
@@ -880,24 +875,15 @@
         <div class="container">
           <div class="section-title reveal">
             <div>
-              <h3>About Me</h3>
-              <!-- <p>
-                A refreshed portfolio section with stronger positioning for
-                recruiters and clients.
-              </p> -->
+              <h2>About Me</h2>
             </div>
           </div>
           <div class="about-grid">
             <div class="card reveal">
-              <h4>Professional Summary</h4>
-              <p>
-                Motivated and detail-oriented Software Engineer with experience
-                across full-stack web development, business systems, and
-                software testing. I have worked on booking systems,
-                ERP/CRM-related products, payment integrations, admin panels,
-                and scalable application features with a focus on performance,
-                maintainability, and usability.
-              </p>
+              <h3>Professional Summary</h3>
+              <p>I'm a Full-Stack Software Engineer with hands-on experience developing web applications, business management systems, and RESTful APIs.</p>
+              <p>I specialize in Laravel, PHP, MySQL, JavaScript, React.js and Vue.js. My experience covers requirement analysis, system design, frontend and backend development, database design, software testing, deployment, and maintenance.</p>
+              <p>I enjoy transforming complex business requirements into scalable, reliable, and user-friendly software solutions.</p>
               <div class="pill-wrap" style="margin-top: 18px">
                 <span class="pill">Full-Stack Development</span>
                 <span class="pill">API Integration</span>
@@ -910,7 +896,7 @@
               </div>
             </div>
             <div class="card reveal">
-              <h4>Domain Expertise</h4>
+              <h3>Domain Expertise</h3>
               <p>
                 I build business-focused software solutions with strong backend
                 logic, structured APIs, responsive interfaces, and maintainable
@@ -918,7 +904,7 @@
               </p>
               <div class="pill-wrap" style="margin-top: 18px">
                 <span class="pill">Web Application Development</span>
-                <span class="pill">ERP / CRM Systems</span>
+                <span class="pill">Business Management Applications</span><span class="pill">Database Design</span><span class="pill">Booking &amp; Payment Systems</span><span class="pill">Deployment &amp; Maintenance</span>
                 <span class="pill">Software Testing & QA</span>
                 <span class="pill">API Development & Integration</span>
                 <span class="pill">Requirement Gathering</span>
@@ -933,15 +919,13 @@
         <div class="container">
           <div class="section-title reveal">
             <div>
-              <h3>Work Experience</h3>
-              <!-- <p>My current and previous roles based on the latest CV data.</p> -->
+              <h2>Work Experience</h2>
             </div>
           </div>
 
           <div class="experience-grid">
-            <!-- FULL TIME -->
             <div class="card reveal">
-              <h4 class="exp-title">Full-Time</h4>
+              <h3 class="exp-title">Full-Time</h3>
               <div class="timeline">
                 <div class="timeline-item">
                   <span class="date">Feb 2024 - Present</span>
@@ -1000,28 +984,22 @@
                 </div>
               </div>
             </div>
-            <br />
-            <!-- PART TIME -->
-            <!-- <div class="card reveal">
-              <h4 class="exp-title">Part-Time</h4>
+            <div class="card reveal">
+              <h3 class="exp-title">Freelance</h3>
               <div class="timeline">
                 <div class="timeline-item">
                   <span class="date">Dec 2025 - Present</span>
-                  <h4>Software Engineer / QA & Business Analyst</h4>
+                  <h4>QA Engineer &amp; Business Analyst (Freelance)</h4>
                   <div class="company">Sichrotec Technology Solutions Inc.</div>
                   <ul>
-                    <li>Performed functional, regression, and API testing</li>
-                    <li>
-                      Designed and maintained test cases and defect workflows
-                    </li>
-                    <li>Supported ERP/CRM requirement documentation</li>
-                    <li>Executed User Acceptance Testing (UAT)</li>
-                    <li>Worked on React, Node.js, and Laravel development</li>
-                    <li>Collaborated with global agile teams</li>
+                    <li>Perform functional and API testing to ensure software quality, reliability, and system integration accuracy.</li>
+                    <li>Analyse business requirements and user workflows to identify improvements and validate solutions.</li>
+                    <li>Prepare test cases, bug reports, and technical feedback while collaborating with development teams.</li>
+                    <li>Validate frontend interfaces, backend processes, and database-driven features for usability and performance.</li>
                   </ul>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </section>
@@ -1032,7 +1010,7 @@
             <div class="card reveal">
               <div class="section-title" style="margin-bottom: 16px">
                 <div>
-                  <h3 style="font-size: 1.8rem">Education</h3>
+                  <h2 style="font-size: 1.8rem">Education</h2>
                 </div>
               </div>
               <div class="timeline">
@@ -1063,7 +1041,7 @@
             <div class="card reveal">
               <div class="section-title" style="margin-bottom: 16px">
                 <div>
-                  <h3 style="font-size: 1.8rem">Certifications</h3>
+                  <h2 id="certifications" style="font-size: 1.8rem">Certifications</h2>
                 </div>
               </div>
               <div class="cert-list">
@@ -1101,31 +1079,15 @@
         <div class="container">
           <div class="section-title reveal">
             <div>
-              <h3>Technical Skills</h3>
-              <!-- <p>
-                Modern technologies and tools I use to deliver reliable
-                applications.
-              </p> -->
+              <h2>Technical Skills</h2>
             </div>
           </div>
-          <div class="skills-grid reveal">
-            <div class="skill-box">PHP</div>
-            <div class="skill-box">Laravel</div>
-            <div class="skill-box">JavaScript</div>
-            <div class="skill-box">Vue.js</div>
-            <div class="skill-box">React</div>
-            <div class="skill-box">Node.js</div>
-            <div class="skill-box">MySQL</div>
-            <div class="skill-box">MS SQL</div>
-            <div class="skill-box">MongoDB</div>
-            <div class="skill-box">Firebase</div>
-            <div class="skill-box">HTML / CSS</div>
-            <div class="skill-box">Bootstrap</div>
-            <div class="skill-box">Git / GitLab</div>
-            <div class="skill-box">Figma</div>
-            <div class="skill-box">Java / C#</div>
-            <div class="skill-box">API Integration</div>
-          </div>
+          <div class="grid skill-categories">
+<div class="card"><h3>Backend</h3><div class="pill-wrap"><span class="pill">Laravel</span><span class="pill">PHP</span><span class="pill">Node.js</span><span class="pill">REST APIs</span></div></div>
+            <div class="card"><h3>Frontend</h3><div class="pill-wrap"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">React.js</span><span class="pill">Vue.js</span><span class="pill">TypeScript</span><span class="pill">Bootstrap</span><span class="pill">Tailwind CSS</span></div></div>
+            <div class="card"><h3>Database</h3><div class="pill-wrap"><span class="pill">MySQL</span><span class="pill">MS SQL</span><span class="pill">MongoDB</span><span class="pill">Firebase</span></div></div>
+            <div class="card"><h3>Tools</h3><div class="pill-wrap"><span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">GitLab</span><span class="pill">Postman</span><span class="pill">Figma</span></div></div>
+            <div class="card"><h3>Additional</h3><div class="pill-wrap"><span class="pill">Software Testing</span><span class="pill">QA</span><span class="pill">Business Analysis</span><span class="pill">WordPress</span><span class="pill">API Integration</span><span class="pill">Deployment</span></div></div></div>
         </div>
       </section>
 
@@ -1133,305 +1095,19 @@
         <div class="container">
           <div class="section-title reveal">
             <div>
-              <h3>Featured Projects</h3>
-              <!-- <p>
-                Selected projects that showcase full-stack development, payment
-                integration, booking systems, and business-focused solutions.
-              </p> -->
+              <h2>Projects</h2>
             </div>
           </div>
-          <div class="grid grid-3">
-            <article class="card project-card featured reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 01</div>
-                    <h4>Inventory &amp; Invoice Management System</h4>
-                  </div>
-                </div>
-                <span class="project-meta">Nov 2025 - Feb 2026</span>
-                <p>
-                  Laravel-based business management platform for product
-                  management, stock tracking, invoice generation, warranty
-                  handling, returns, and service note management with
-                  transactional data integrity.
-                </p>
-                <ul
-                  class="project-features"
-                  aria-label="Inventory and invoice system key features"
-                >
-                  <li>Secure Laravel Auth login</li>
-                  <li>Central dashboard with alerts</li>
-                  <li>Inventory and stock management</li>
-                  <li>Multi-item invoice generation</li>
-                  <li>Real-time stock validation</li>
-                  <li>Warranty and serial tracking</li>
-                  <li>Searchable customer selection</li>
-                  <li>Product, return, and service modules</li>
-                </ul>
-                <div class="project-tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">PHP</span>
-                  <span class="tag">MySQL</span>
-                  <span class="tag">Blade</span>
-                  <span class="tag">jQuery</span>
-                  <span class="tag">Bootstrap</span>
-                  <span class="tag">Select2</span>
-                  <span class="tag">DataTables</span>
-                  <span class="tag">Eloquent ORM</span>
-                  <span class="tag">REST APIs</span>
-                  <span class="tag">Database Design</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 02</div>
-                    <h4>Crown Motors</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://crownmotors.nz/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                  <a
-                    class="btn btn-secondary"
-                    href="https://github.com/thiran-naleendra/crown-motors.git"
-                    target="_blank"
-                    rel="noopener"
-                    >Github</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">React</span>
-                  <span class="tag">TypeScript</span>
-                  <span class="tag">Tailwind CSS</span>
-                  <span class="tag">Cloudflare</span>
-                </div>
-                <p>
-                  Responsive business website for a New Zealand customer with a
-                  custom domain, Cloudflare DNS, SSL, and hosting configuration.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 03</div>
-                    <h4>Melbourne Geotech</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://www.melbournegeotech.com.au/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                  <a
-                    class="btn btn-secondary"
-                    href="https://github.com/thiran-naleendra/admin_panel.git"
-                    target="_blank"
-                    rel="noopener"
-                    >Github</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">PHP</span>
-                  <span class="tag">MySQL</span>
-                  <span class="tag">VPS</span>
-                </div>
-                <p>
-                  Full-stack engineering system with scheduling, quotations,
-                  consultations, VPS hosting, and domain configuration.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 04</div>
-                    <h4>Sri Soul Ventures</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://srisoulventures.com/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">PHP</span>
-                  <span class="tag">Tailwind CSS</span>
-                  <span class="tag">Tourism</span>
-                  <span class="tag">Responsive UI</span>
-                </div>
-                <p>
-                  Tourism website for curated Sri Lankan travel packages,
-                  destination highlights, contact information, and a
-                  brand-focused visitor experience.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 05</div>
-                    <h4>Pearl Lanka Tours</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://pearllankatours.lk/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">PHP</span>
-                  <span class="tag">Tailwind CSS</span>
-                  <span class="tag">Tourism</span>
-                  <span class="tag">Responsive UI</span>
-                </div>
-                <p>
-                  Tourism website for Sri Lanka tours, safaris, beach trips,
-                  cultural experiences, destination browsing, and direct tour
-                  booking inquiries.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top with-actions">
-                  <div>
-                    <div class="project-number">PROJECT 06</div>
-                    <h4>Whale Watching Mirissa</h4>
-                  </div>
-                  <div class="project-actions">
-                    <a
-                      class="btn btn-secondary"
-                      href="https://whalewatchingmirissa.com/"
-                      target="_blank"
-                      rel="noopener"
-                      >Visit</a
-                    >
-                    <a
-                      class="btn btn-secondary"
-                      href="https://github.com/thiran-naleendra/whale_watching_mirissa.git"
-                      target="_blank"
-                      rel="noopener"
-                      >Frontend Github</a
-                    >
-                    <a
-                      class="btn btn-secondary"
-                      href="https://github.com/thiran-naleendra/whale_bookig_mirissa.git"
-                      target="_blank"
-                      rel="noopener"
-                      >Booking Github</a
-                    >
-                  </div>
-                </div>
-                <div class="project-tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">PHP</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">PayHere</span>
-                  <span class="tag">Admin Panel</span>
-                </div>
-                <p>
-                  Tourism frontend website and booking platform with online
-                  reservations, PayHere payment gateway integration, and an
-                  admin panel for managing bookings and operations.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 07</div>
-                    <h4>Barbertime.nz</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://barbertime.co.nz/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                  <a
-                    class="btn btn-secondary"
-                    href="https://github.com/thiran-naleendra/barbertime.co.nz.git"
-                    target="_blank"
-                    rel="noopener"
-                    >Github</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">Stripe</span>
-                  <span class="tag">MySQL</span>
-                  <span class="tag">Tailwind / UI</span>
-                </div>
-                <p>
-                  Built a full-stack barber booking and management system with
-                  appointment booking, product sales, admin panel features, and
-                  business-friendly management workflows.
-                </p>
-              </div>
-            </article>
-
-            <article class="card project-card reveal">
-              <div>
-                <div class="project-top">
-                  <div>
-                    <div class="project-number">PROJECT 08</div>
-                    <h4>Lakindu Tours</h4>
-                  </div>
-                  <a
-                    class="btn btn-secondary"
-                    href="https://www.srilankacardriver.com/"
-                    target="_blank"
-                    rel="noopener"
-                    >Visit</a
-                  >
-                  <a
-                    class="btn btn-secondary"
-                    href="https://github.com/thiran-naleendra/Lakindu_Tours.git"
-                    target="_blank"
-                    rel="noopener"
-                    >Github</a
-                  >
-                </div>
-                <div class="project-tags">
-                  <span class="tag">Vue.js</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">Admin Panel</span>
-                  <span class="tag">Tourism</span>
-                </div>
-                <p>
-                  Tourism website and admin panel for showcasing Sri Lankan
-                  tours, driver services, destinations, and managing website
-                  content and customer inquiries.
-                </p>
-              </div>
-            </article>
-
-          </div>
+          <p class="gallery-intro">Selected applications, websites, demos and work in development. Open details for scope and implementation notes.</p>
+          <h3 class="gallery-heading">Featured Projects</h3>
+          <div id="featured-projects" class="grid grid-3"></div>
+          <h3 class="gallery-heading" id="all-projects-heading">All Projects</h3>
+          <div class="project-filters" role="group" aria-label="Filter projects by category"></div>
+          <p id="gallery-count" role="status" aria-live="polite"></p>
+          <div id="project-gallery" class="grid grid-3" aria-labelledby="all-projects-heading"></div>
+          <p id="project-empty" hidden>No projects in this category yet.</p>
+          <button id="show-more" class="btn btn-secondary" type="button" aria-expanded="false" aria-controls="project-gallery">Show More</button>
+          <noscript><p>Enable JavaScript to explore the project gallery. <a href="https://github.com/thiran-naleendra">Browse my GitHub profile</a>.</p></noscript>
         </div>
       </section>
 
@@ -1439,16 +1115,12 @@
         <div class="container">
           <div class="section-title reveal">
             <div>
-              <h3>Let’s Build Something Great</h3>
-              <!-- <p>
-                Open to software engineering opportunities, freelance work, and
-                product-focused collaborations.
-              </p> -->
+              <h2>Let&#8217;s Build Something Great</h2>
             </div>
           </div>
           <div class="grid grid-2">
             <div class="card reveal">
-              <h4>Contact Information</h4>
+              <h3>Contact Information</h3><p>Have a project in mind? <a href="mailto:wgthiran@gmail.com">Let&#8217;s talk about it.</a></p><p>Matara, Sri Lanka</p>
               <div class="contact-list">
                 <div class="line-item">
                   <strong>Email</strong
@@ -1467,7 +1139,7 @@
                   ><span
                     ><a
                       href="https://www.linkedin.com/in/thiran-naleendra-4b8b12160/"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       >thiran-naleendra-4b8b12160</a
                     ></span
                   >
@@ -1477,7 +1149,7 @@
                   ><span
                     ><a
                       href="https://github.com/thiran-naleendra"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       >thiran-naleendra</a
                     ></span
                   >
@@ -1485,7 +1157,7 @@
               </div>
             </div>
             <div class="card reveal">
-              <h4>Strengths</h4>
+              <h3>Strengths</h3>
               <div class="pill-wrap">
                 <span class="pill">Analytical Thinking</span>
                 <span class="pill">Team Management</span>
@@ -1496,7 +1168,7 @@
                 <span class="pill">Communication</span>
                 <span class="pill">Collaboration</span>
               </div>
-              <h4 style="margin-top: 24px">Interests</h4>
+              <h3 style="margin-top: 24px">Interests</h3>
               <div class="pill-wrap">
                 <span class="pill">Travelling</span>
                 <span class="pill">Music</span>
@@ -1510,57 +1182,7 @@
       </section>
     </main>
 
-    <footer>
-      <div class="container">© <span id="year"></span> Thiran Naleendra</div>
-    </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-            }
-          });
-        },
-        { threshold: 0.12 },
-      );
-
-      document
-        .querySelectorAll(".reveal")
-        .forEach((el) => observer.observe(el));
-
-      const nav = document.querySelector(".nav");
-      let lastScrollY = window.scrollY;
-
-      const handleMobileNav = () => {
-        const currentScrollY = window.scrollY;
-        const isMobile = window.innerWidth <= 720;
-
-        nav.classList.toggle("nav-scrolled", currentScrollY > 12);
-
-        if (!isMobile) {
-          nav.classList.remove("nav-hidden");
-          lastScrollY = currentScrollY;
-          return;
-        }
-
-        if (currentScrollY <= 10) {
-          nav.classList.remove("nav-hidden");
-        } else if (currentScrollY > lastScrollY + 8) {
-          nav.classList.add("nav-hidden");
-        } else if (currentScrollY < lastScrollY - 8) {
-          nav.classList.remove("nav-hidden");
-        }
-
-        lastScrollY = currentScrollY;
-      };
-
-      window.addEventListener("scroll", handleMobileNav, { passive: true });
-      window.addEventListener("resize", handleMobileNav);
-      handleMobileNav();
-    </script>
+    <footer><div class="container"><strong>Thiran Naleendra</strong><p>Full-Stack Software Engineer</p><div class="footer-links"><a href="#home">Home</a><a href="#projects">Projects</a><a href="https://www.linkedin.com/in/thiran-naleendra-4b8b12160/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/thiran-naleendra" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:wgthiran@gmail.com">Email</a></div><p>&copy; <span id="year"></span> Thiran Naleendra</p></div></footer>
+    <dialog id="project-dialog" aria-labelledby="dialog-title"><button class="btn btn-secondary dialog-close" type="button" autofocus>Close</button><div id="dialog-content"></div></dialog>
   </body>
 </html>
