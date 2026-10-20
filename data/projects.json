@@ -1,9 +1,6 @@
-// Existing portfolio details preserved; provisional additions carry verification notes.
-window.portfolioProjects = [
+[
   {
     "id": "project-01",
-    "name": "Inventory & Invoice Management System",
-    "shortDescription": "Laravel-based business management platform for product management, stock tracking, invoice generation, warranty handling, returns, and service note management with transactional data integrity.",
     "fullDescription": "Laravel-based business management platform for product management, stock tracking, invoice generation, warranty handling, returns, and service note management with transactional data integrity.",
     "category": "Web Applications",
     "status": "Completed",
@@ -35,23 +32,18 @@ window.portfolioProjects = [
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": true,
-    "displayOrder": 1,
     "date": "Nov 2025 - Feb 2026",
-    "verificationNotes": []
+    "verificationNotes": [],
+    "title": "Inventory & Invoice Management System",
+    "description": "Laravel-based business management platform for product management, stock tracking, invoice generation, warranty handling, returns, and service note management with transactional data integrity.",
+    "order": 1
   },
   {
     "id": "project-02",
-    "name": "Crown Motors",
-    "shortDescription": "Responsive business website for a New Zealand customer with a custom domain, Cloudflare DNS, SSL, and hosting configuration.",
     "fullDescription": "Responsive business website for a New Zealand customer with a custom domain, Cloudflare DNS, SSL, and hosting configuration.",
     "category": "Business Websites",
     "status": "Completed",
-    "technologies": [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Cloudflare"
-    ],
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Cloudflare"],
     "features": [],
     "image": "images/crownmotors.nz.png",
     "liveUrl": "https://crownmotors.nz/",
@@ -62,27 +54,22 @@ window.portfolioProjects = [
         "label": "Github"
       }
     ],
-    "featured": true,
-    "displayOrder": 2,
+    "featured": false,
     "date": null,
     "verificationNotes": [
       "Repository URLs are preserved from the existing portfolio; current public availability could not be confirmed.",
       "Existing website URL retained; current availability could not be confirmed."
-    ]
+    ],
+    "title": "Crown Motors",
+    "description": "Responsive business website for a New Zealand customer with a custom domain, Cloudflare DNS, SSL, and hosting configuration.",
+    "order": 2
   },
   {
     "id": "project-03",
-    "name": "Melbourne Geotech",
-    "shortDescription": "Full-stack engineering system with scheduling, quotations, consultations, VPS hosting, and domain configuration.",
     "fullDescription": "Full-stack engineering system with scheduling, quotations, consultations, VPS hosting, and domain configuration.",
     "category": "Web Applications",
     "status": "Completed",
-    "technologies": [
-      "Laravel",
-      "PHP",
-      "MySQL",
-      "VPS"
-    ],
+    "technologies": ["Laravel", "PHP", "MySQL", "VPS"],
     "features": [],
     "image": "images/melbournegeotech.png",
     "liveUrl": "https://www.melbournegeotech.com.au/",
@@ -93,76 +80,89 @@ window.portfolioProjects = [
         "label": "Github"
       }
     ],
-    "featured": true,
-    "displayOrder": 3,
+    "featured": false,
     "date": null,
     "verificationNotes": [
       "Repository URLs are preserved from the existing portfolio; current public availability could not be confirmed.",
       "Existing project scope and URLs retained. The current public website credits another developer; confirm how the earlier application relates to the current site."
-    ]
+    ],
+    "title": "Melbourne Geotech",
+    "description": "Full-stack engineering system with scheduling, quotations, consultations, VPS hosting, and domain configuration.",
+    "order": 3
   },
+
   {
     "id": "project-04",
-    "name": "Sri Soul Ventures",
-    "shortDescription": "Tourism website for curated Sri Lankan travel packages, destination highlights, contact information, and a brand-focused visitor experience.",
-    "fullDescription": "Tourism website for curated Sri Lankan travel packages, destination highlights, contact information, and a brand-focused visitor experience.",
-    "category": "Business Websites",
+    "title": "Sri Soul Ventures",
+    "description": "A modern, responsive Sri Lankan tourism website featuring travel packages, destinations, experiences, and personalized tour planning with a dynamic admin panel.",
+    "fullDescription": "Developed a comprehensive tourism and travel management website for Sri Soul Ventures using Laravel, PHP, MySQL, Blade, Bootstrap 5, and JavaScript. The platform showcases curated Sri Lankan travel experiences, destinations, and tour packages with detailed itineraries, image galleries, pricing, and customizable travel options. A centralized admin panel enables management of website content, travel packages, destinations, experiences, customer enquiries, custom tour requests, testimonials, and website settings. The website features responsive layouts, SEO-friendly URLs, dynamic content rendering, and WhatsApp integration.",
+    "category": "Web Applications",
     "status": "Completed",
     "technologies": [
+      "Laravel",
       "PHP",
-      "Tailwind CSS",
-      "Tourism",
-      "Responsive UI"
+      "MySQL",
+      "Blade",
+      "Bootstrap 5",
+      "JavaScript",
+      "HTML5",
+      "CSS3"
     ],
-    "features": [],
+    "features": [
+      "Fully Responsive Tourism Website",
+      "Dynamic Admin Dashboard",
+      "Tour Package Management",
+      "Detailed Package Itineraries",
+      "Destination Management",
+      "Travel Experience Management",
+      "Custom Tour Planning Requests",
+      "Package Availability Enquiries",
+      "Advanced Search and Filtering",
+      "Multiple Image Gallery Management",
+      "Customer Enquiry Management",
+      "Testimonials and FAQ Management",
+      "Dynamic Homepage Content Management",
+      "Role-Based Admin Access",
+      "WhatsApp Integration",
+      "SEO-Friendly URLs",
+      "Website Settings Management"
+    ],
     "image": "images/sri soul ventures.png",
     "liveUrl": "https://srisoulventures.com/",
     "githubUrl": null,
     "repositoryLinks": [],
-    "featured": false,
-    "displayOrder": 4,
+    "featured": true,
     "date": null,
     "verificationNotes": [
-      "Existing website URL retained; current availability could not be confirmed."
-    ]
+      "Confirm the deployed website includes all listed admin and enquiry features.",
+      "Confirm the production technology stack and live website availability."
+    ],
+    "order": 4
   },
   {
     "id": "project-05",
-    "name": "Pearl Lanka Tours",
-    "shortDescription": "Tourism website for Sri Lanka tours, safaris, beach trips, cultural experiences, destination browsing, and direct tour booking inquiries.",
     "fullDescription": "Tourism website for Sri Lanka tours, safaris, beach trips, cultural experiences, destination browsing, and direct tour booking inquiries.",
     "category": "Business Websites",
     "status": "Live",
-    "technologies": [
-      "PHP",
-      "Tailwind CSS",
-      "Tourism",
-      "Responsive UI"
-    ],
+    "technologies": ["PHP", "Tailwind CSS", "Tourism", "Responsive UI"],
     "features": [],
     "image": "images/pearl lanka tours.png",
     "liveUrl": "https://pearllankatours.lk/",
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 5,
     "date": null,
-    "verificationNotes": []
+    "verificationNotes": [],
+    "title": "Pearl Lanka Tours",
+    "description": "Tourism website for Sri Lanka tours, safaris, beach trips, cultural experiences, destination browsing, and direct tour booking inquiries.",
+    "order": 5
   },
   {
     "id": "project-06",
-    "name": "Whale Watching Mirissa",
-    "shortDescription": "Tourism frontend website and booking platform with online reservations, PayHere payment gateway integration, and an admin panel for managing bookings and operations.",
     "fullDescription": "Tourism frontend website and booking platform with online reservations, PayHere payment gateway integration, and an admin panel for managing bookings and operations.",
     "category": "Web Applications",
     "status": "Live",
-    "technologies": [
-      "Laravel",
-      "PHP",
-      "JavaScript",
-      "PayHere",
-      "Admin Panel"
-    ],
+    "technologies": ["Laravel", "PHP", "JavaScript", "PayHere", "Admin Panel"],
     "features": [],
     "image": "images/whalewatchingmirissa.png",
     "liveUrl": "https://whalewatchingmirissa.com/",
@@ -177,26 +177,21 @@ window.portfolioProjects = [
         "label": "Booking Github"
       }
     ],
-    "featured": true,
-    "displayOrder": 6,
+    "featured": false,
     "date": null,
     "verificationNotes": [
       "Repository URLs are preserved from the existing portfolio; current public availability could not be confirmed."
-    ]
+    ],
+    "title": "Whale Watching Mirissa",
+    "description": "Tourism frontend website and booking platform with online reservations, PayHere payment gateway integration, and an admin panel for managing bookings and operations.",
+    "order": 6
   },
   {
     "id": "project-07",
-    "name": "Barbertime.nz",
-    "shortDescription": "Built a full-stack barber booking and management system with appointment booking, product sales, admin panel features, and business-friendly management workflows.",
     "fullDescription": "Built a full-stack barber booking and management system with appointment booking, product sales, admin panel features, and business-friendly management workflows.",
     "category": "Web Applications",
     "status": "Live",
-    "technologies": [
-      "Laravel",
-      "Stripe",
-      "MySQL",
-      "Tailwind / UI"
-    ],
+    "technologies": ["Laravel", "Stripe", "MySQL", "Tailwind / UI"],
     "features": [],
     "image": "images/barbertime.co.nz.png",
     "liveUrl": "https://barbertime.co.nz/",
@@ -207,26 +202,21 @@ window.portfolioProjects = [
         "label": "Github"
       }
     ],
-    "featured": true,
-    "displayOrder": 7,
+    "featured": false,
     "date": null,
     "verificationNotes": [
       "Repository URLs are preserved from the existing portfolio; current public availability could not be confirmed."
-    ]
+    ],
+    "title": "Barbertime.nz",
+    "description": "Built a full-stack barber booking and management system with appointment booking, product sales, admin panel features, and business-friendly management workflows.",
+    "order": 7
   },
   {
     "id": "project-08",
-    "name": "Lakindu Tours",
-    "shortDescription": "Tourism website and admin panel for showcasing Sri Lankan tours, driver services, destinations, and managing website content and customer inquiries.",
     "fullDescription": "Tourism website and admin panel for showcasing Sri Lankan tours, driver services, destinations, and managing website content and customer inquiries.",
     "category": "Business Websites",
     "status": "Live",
-    "technologies": [
-      "Vue.js",
-      "JavaScript",
-      "Admin Panel",
-      "Tourism"
-    ],
+    "technologies": ["Vue.js", "JavaScript", "Admin Panel", "Tourism"],
     "features": [],
     "image": "images/sri lankan car driver.png",
     "liveUrl": "https://www.srilankacardriver.com/",
@@ -238,50 +228,90 @@ window.portfolioProjects = [
       }
     ],
     "featured": false,
-    "displayOrder": 8,
     "date": null,
     "verificationNotes": [
       "Repository URLs are preserved from the existing portfolio; current public availability could not be confirmed."
-    ]
+    ],
+    "title": "Lakindu Tours",
+    "description": "Tourism website and admin panel for showcasing Sri Lankan tours, driver services, destinations, and managing website content and customer inquiries.",
+    "order": 8
   },
   {
     "id": "project-09",
-    "name": "Ceylon Vacation Venues",
-    "shortDescription": "Villa and holiday accommodation listing website with property listings and booking inquiries.",
-    "fullDescription": "Villa and holiday accommodation listing website with property listings and booking inquiries.",
+    "title": "Ceylon Vacation Venues",
+    "description": "A full-stack tourism and travel management platform built with Laravel, featuring tour packages, villas, vehicle rentals, travel services, customer inquiries, and a secure administration panel.",
+    "fullDescription": "Ceylon Vacation Venues is a comprehensive, mobile-first tourism and travel services web application developed for a Sri Lankan travel business. The platform allows visitors to explore tour packages, discover villas and holiday houses, browse rental vehicles, request visa assistance, arrange baggage transportation, and submit booking inquiries. A secure, role-based administration panel enables authorized staff to manage accommodation listings, tour packages, vehicles, gallery images, blog articles, customer requests, website content, and SEO settings. The application includes SMTP email notifications, dynamic content management, responsive layouts, search-engine optimization, and server-side security controls. Built using Laravel, PHP, MySQL, Blade, Tailwind CSS, Alpine.js, and Vite, the system is designed for performance, maintainability, and scalability.",
     "category": "Web Applications",
     "status": "Live",
     "technologies": [
       "Laravel",
-      "PHP",
+      "PHP 8.3",
       "MySQL",
-      "Blade"
+      "Laravel Blade",
+      "Tailwind CSS",
+      "Alpine.js",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Vite",
+      "Laravel Eloquent ORM",
+      "Laravel Mail",
+      "SMTP",
+      "Git",
+      "SEO",
+      "JSON-LD"
     ],
     "features": [
-      "Property listings",
-      "Gallery",
-      "Inquiry forms"
+      "Fully responsive mobile-first tourism website",
+      "Dynamic tour package management",
+      "Villas and holiday houses listing management",
+      "Vehicle rental management",
+      "Visa extension assistance requests",
+      "Baggage transportation requests",
+      "Customer booking and inquiry management",
+      "Automated SMTP email notifications",
+      "Secure administration dashboard",
+      "Role-based access control (RBAC)",
+      "User management with CRUD operations",
+      "Property and tour package CRUD",
+      "Dynamic image gallery management",
+      "Blog and article management",
+      "Content management system (CMS)",
+      "Dynamic website settings management",
+      "SEO-friendly URLs and slugs",
+      "Custom SEO metadata management",
+      "Open Graph and social sharing optimization",
+      "XML sitemap and robots.txt support",
+      "JSON-LD structured data",
+      "Canonical URL management",
+      "Image optimization and lazy loading",
+      "WhatsApp contact integration",
+      "Laravel Form Request validation",
+      "Authentication and authorization policies",
+      "CSRF and XSS protection",
+      "Secure file upload handling",
+      "Database relationships and indexing",
+      "Performance optimization",
+      "Responsive admin dashboard",
+      "Inquiry tracking and management"
     ],
     "image": "images/ceylonvacationvenues.png",
     "liveUrl": "https://ceylonvacationvenues.com/",
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": true,
-    "displayOrder": 9,
     "verificationNotes": [
-      "Administrative features and implementation stack need source confirmation."
-    ]
+      "Technology stack and application features are based on the documented project implementation.",
+      "Production deployment and individual feature availability should be verified against the live application."
+    ],
+    "order": 9
   },
   {
     "id": "project-10",
-    "name": "Kookaburra Sport",
-    "shortDescription": "Sports business website maintenance, product-related content, and frontend improvements.",
     "fullDescription": "Sports business website maintenance, product-related content, and frontend improvements.",
     "category": "Business Websites",
     "status": "Live",
-    "technologies": [
-      "WordPress"
-    ],
+    "technologies": ["WordPress"],
     "features": [],
     "image": "images/Project Preview_ Modern Software Showcase.png",
     "imageAlt": "Generic project preview illustration; project screenshot not yet available",
@@ -289,15 +319,15 @@ window.portfolioProjects = [
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 10,
     "verificationNotes": [
       "Confirm the precise maintenance contribution; no claim of sole development."
-    ]
+    ],
+    "title": "Kookaburra Sport",
+    "description": "Sports business website maintenance, product-related content, and frontend improvements.",
+    "order": 10
   },
   {
     "id": "project-11",
-    "name": "Dynamic Computer Systems",
-    "shortDescription": "IT and CCTV solutions business website showcasing products and customer enquiry options.",
     "fullDescription": "IT and CCTV solutions business website showcasing products and customer enquiry options.",
     "category": "Business Websites",
     "status": "Live",
@@ -309,15 +339,15 @@ window.portfolioProjects = [
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 11,
     "verificationNotes": [
       "Technology stack and individual CCTV modules need source confirmation."
-    ]
+    ],
+    "title": "Dynamic Computer Systems",
+    "description": "IT and CCTV solutions business website showcasing products and customer enquiry options.",
+    "order": 11
   },
   {
     "id": "project-12",
-    "name": "Radesha Tours",
-    "shortDescription": "Sri Lankan travel services website with frontend development work.",
     "fullDescription": "Sri Lankan travel services website with frontend development work.",
     "category": "Business Websites",
     "status": "Live",
@@ -328,15 +358,15 @@ window.portfolioProjects = [
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 12,
     "verificationNotes": [
       "Confirm deployed technologies and contribution; proposed React-to-PHP conversion is not asserted."
-    ]
+    ],
+    "title": "Radesha Tours",
+    "description": "Sri Lankan travel services website with frontend development work.",
+    "order": 12
   },
   {
     "id": "project-13",
-    "name": "HRIS Management Demo",
-    "shortDescription": "Human resource management frontend demonstration.",
     "fullDescription": "Human resource management frontend demonstration.",
     "category": "Demos & Prototypes",
     "status": "Demo",
@@ -348,22 +378,19 @@ window.portfolioProjects = [
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 13,
     "verificationNotes": [
       "Demo code, employee and attendance interfaces, and technology stack need verification. Link could not be confirmed."
-    ]
+    ],
+    "title": "HRIS Management Demo",
+    "description": "Human resource management frontend demonstration.",
+    "order": 13
   },
   {
     "id": "project-14",
-    "name": "HRIS Biometric Attendance Application",
-    "shortDescription": "Android attendance prototype exploring face capture and GPS-assisted attendance workflows.",
     "fullDescription": "Android attendance prototype exploring face capture and GPS-assisted attendance workflows.",
     "category": "Mobile Applications",
     "status": "In Development",
-    "technologies": [
-      "Flutter",
-      "Dart"
-    ],
+    "technologies": ["Flutter", "Dart"],
     "features": [],
     "image": "images/Project Preview_ Modern Software Showcase.png",
     "imageAlt": "Generic project preview illustration; project screenshot not yet available",
@@ -371,38 +398,34 @@ window.portfolioProjects = [
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 14,
     "verificationNotes": [
       "Prototype only: face verification, GPS checks and backend integration need implementation review. GPS Attendance Module retained here provisionally to avoid duplication."
-    ]
+    ],
+    "title": "HRIS Biometric Attendance Application",
+    "description": "Android attendance prototype exploring face capture and GPS-assisted attendance workflows.",
+    "order": 14
   },
   {
     "id": "project-15",
-    "name": "Ibizza Mirissa Website Demo",
-    "shortDescription": "Responsive hospitality website demonstration for a possible modern Mirissa business web presence.",
     "fullDescription": "Responsive hospitality website demonstration for a possible modern Mirissa business web presence.",
     "category": "Demos & Prototypes",
     "status": "Demo",
-    "technologies": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
+    "technologies": ["HTML", "CSS", "JavaScript"],
     "features": [],
     "image": "images/ibizza.png",
     "liveUrl": "https://thiran-naleendra.github.io/ibizza_mirissa_demo/",
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 15,
     "verificationNotes": [
       "Demo availability and source implementation need verification."
-    ]
+    ],
+    "title": "Ibizza Mirissa Website Demo",
+    "description": "Responsive hospitality website demonstration for a possible modern Mirissa business web presence.",
+    "order": 15
   },
   {
     "id": "project-16",
-    "name": "Mushroom Farm Manager",
-    "shortDescription": "Application in development for mushroom production, inventory, packaging, sales, and operational tracking.",
     "fullDescription": "Application in development for mushroom production, inventory, packaging, sales, and operational tracking.",
     "category": "Web Applications",
     "status": "In Development",
@@ -421,15 +444,15 @@ window.portfolioProjects = [
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 16,
     "verificationNotes": [
       "Farm records, 200g packets, batches, sales and Simple/Advanced modes are requirements; completion is unverified."
-    ]
+    ],
+    "title": "Mushroom Farm Manager",
+    "description": "Application in development for mushroom production, inventory, packaging, sales, and operational tracking.",
+    "order": 16
   },
   {
     "id": "project-17",
-    "name": "POS & Store Management System",
-    "shortDescription": "Planned point-of-sale and inventory solution for store operations and delivery vehicle stock tracking.",
     "fullDescription": "Planned point-of-sale and inventory solution for store operations and delivery vehicle stock tracking.",
     "category": "Web Applications",
     "status": "In Development",
@@ -441,23 +464,19 @@ window.portfolioProjects = [
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 17,
     "verificationNotes": [
       "Verify source technologies and implementation of barcode sales, loading, returns and role-based dashboards."
-    ]
+    ],
+    "title": "POS & Store Management System",
+    "description": "Planned point-of-sale and inventory solution for store operations and delivery vehicle stock tracking.",
+    "order": 17
   },
   {
     "id": "project-18",
-    "name": "Quotation & Invoice Application",
-    "shortDescription": "Small-business quotation and invoicing application in development.",
     "fullDescription": "Small-business quotation and invoicing application in development.",
     "category": "Web Applications",
     "status": "In Development",
-    "technologies": [
-      "Laravel",
-      "PHP",
-      "MySQL"
-    ],
+    "technologies": ["Laravel", "PHP", "MySQL"],
     "features": [],
     "image": "images/Project Preview_ Modern Software Showcase.png",
     "imageAlt": "Generic project preview illustration; project screenshot not yet available",
@@ -465,23 +484,19 @@ window.portfolioProjects = [
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 18,
     "verificationNotes": [
       "Verify implementation and distinct scope from Inventory & Invoice Management System. SKU management, WhatsApp sharing and dashboard remain planned."
-    ]
+    ],
+    "title": "Quotation & Invoice Application",
+    "description": "Small-business quotation and invoicing application in development.",
+    "order": 18
   },
   {
     "id": "project-19",
-    "name": "Office Work Tracker",
-    "shortDescription": "Provisional personal work management application for tasks, activities, and timelines.",
     "fullDescription": "Provisional personal work management application for tasks, activities, and timelines.",
     "category": "Web Applications",
     "status": "Unverified",
-    "technologies": [
-      "Laravel",
-      "PHP",
-      "MySQL"
-    ],
+    "technologies": ["Laravel", "PHP", "MySQL"],
     "features": [],
     "image": "images/Project Preview_ Modern Software Showcase.png",
     "imageAlt": "Generic project preview illustration; project screenshot not yet available",
@@ -489,9 +504,11 @@ window.portfolioProjects = [
     "githubUrl": null,
     "repositoryLinks": [],
     "featured": false,
-    "displayOrder": 19,
     "verificationNotes": [
       "Implementation and publication readiness require confirmation."
-    ]
+    ],
+    "title": "Office Work Tracker",
+    "description": "Provisional personal work management application for tasks, activities, and timelines.",
+    "order": 19
   }
-];
+]

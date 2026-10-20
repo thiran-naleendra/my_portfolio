@@ -1,0 +1,20 @@
+[
+  {
+    "id": "education-1",
+    "title": "BSc (Hons) Software Engineering",
+    "institution": "Cardiff Metropolitan University (UK)",
+    "date": "2024 - 2025"
+  },
+  {
+    "id": "education-2",
+    "title": "Higher National Diploma in Software Engineering",
+    "institution": "National Institute of Business Management (NIBM)",
+    "date": "2022 - 2023"
+  },
+  {
+    "id": "education-3",
+    "title": "Diploma in Software Engineering",
+    "institution": "National Institute of Business Management (NIBM)",
+    "date": "2020 - 2021"
+  }
+]

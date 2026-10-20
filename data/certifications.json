@@ -1,0 +1,44 @@
+[
+  {
+    "id": "certification-1",
+    "title": "Server-side Web Programming",
+    "provider": "University of Moratuwa",
+    "date": "2023",
+    "url": "https://www.google.com/"
+  },
+  {
+    "id": "certification-2",
+    "title": "Front-End Web Development",
+    "provider": "University of Moratuwa",
+    "date": "2022",
+    "url": ""
+  },
+  {
+    "id": "certification-3",
+    "title": "Programming in Python",
+    "provider": "University of Moratuwa",
+    "date": "2023",
+    "url": ""
+  },
+  {
+    "id": "certification-4",
+    "title": "JavaScript Essential Training",
+    "provider": "LinkedIn",
+    "date": "2025",
+    "url": ""
+  },
+  {
+    "id": "certification-5",
+    "title": "Postman API Fundamentals Student Expert",
+    "provider": "Postman",
+    "date": "2025",
+    "url": ""
+  },
+  {
+    "id": "certification-6",
+    "title": "Certified in Cybersecurity (CC) Self-Paced",
+    "provider": "(ISC)2",
+    "date": "2023",
+    "url": ""
+  }
+]

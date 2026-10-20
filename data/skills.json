@@ -1,0 +1,118 @@
+[
+  {
+    "category": "Backend",
+    "skills": [
+      {
+        "name": "Laravel",
+        "icon": "images/skills/laravel.png"
+      },
+      {
+        "name": "PHP"
+      },
+      {
+        "name": "Node.js",
+        "icon": "images/skills/node.png"
+      },
+      {
+        "name": "REST APIs"
+      }
+    ]
+  },
+  {
+    "category": "Frontend",
+    "skills": [
+      {
+        "name": "HTML",
+        "icon": "images/skills/html.png"
+      },
+      {
+        "name": "CSS",
+        "icon": "images/skills/css.png"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "images/skills/javascript.png"
+      },
+      {
+        "name": "React.js",
+        "icon": "images/skills/react.png"
+      },
+      {
+        "name": "Vue.js"
+      },
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "Bootstrap",
+        "icon": "images/skills/bootstrap.png"
+      },
+      {
+        "name": "Tailwind CSS"
+      }
+    ]
+  },
+  {
+    "category": "Databases",
+    "skills": [
+      {
+        "name": "MySQL"
+      },
+      {
+        "name": "MS SQL"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "images/skills/mongo.png"
+      },
+      {
+        "name": "Firebase",
+        "icon": "images/skills/firebase.png"
+      }
+    ]
+  },
+  {
+    "category": "Tools & DevOps",
+    "skills": [
+      {
+        "name": "Git"
+      },
+      {
+        "name": "GitHub"
+      },
+      {
+        "name": "GitLab"
+      },
+      {
+        "name": "Postman"
+      },
+      {
+        "name": "Figma"
+      }
+    ]
+  },
+  {
+    "category": "Other Skills",
+    "skills": [
+      {
+        "name": "Software Testing"
+      },
+      {
+        "name": "QA"
+      },
+      {
+        "name": "Business Analysis"
+      },
+      {
+        "name": "WordPress",
+        "icon": "images/skills/wordpress.png"
+      },
+      {
+        "name": "API Integration"
+      },
+      {
+        "name": "Deployment"
+      }
+    ]
+  }
+]

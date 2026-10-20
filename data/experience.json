@@ -1,0 +1,52 @@
+[
+  {
+    "id": "experience-1",
+    "company": "Rabbit Solutions (PVT) Ltd",
+    "position": "Junior Software Engineer",
+    "employmentType": "Full-Time",
+    "startDate": "2024-02",
+    "endDate": null,
+    "current": true,
+    "description": [
+      "Developed and maintained scalable web applications using Laravel, Vue.js, JavaScript, HTML, CSS, and MySQL",
+      "Designed and implemented backend services following MVC architecture to improve maintainability and scalability",
+      "Built and integrated RESTful APIs for frontend and third-party integrations",
+      "Collaborated with QA, UI/UX, and product teams to deliver production-ready software solutions",
+      "Optimized application performance, frontend responsiveness, and database operations",
+      "Participated in debugging, code reviews, deployment activities, and technical documentation"
+    ],
+    "technologies": []
+  },
+  {
+    "id": "experience-2",
+    "company": "Rabbit Solutions (PVT) Ltd",
+    "position": "Intern Software Engineer",
+    "employmentType": "Full-Time",
+    "startDate": "2023-02-20",
+    "endDate": "2024-02",
+    "current": false,
+    "description": [
+      "Contributed to full-stack web application development using PHP, Laravel, SQL Server, HTML, CSS, and JavaScript",
+      "Assisted in application configuration, debugging, and client support activities",
+      "Worked with development teams to implement new features and improve system functionality",
+      "Gained hands-on experience in backend development, database management, and software deployment workflows"
+    ],
+    "technologies": []
+  },
+  {
+    "id": "experience-3",
+    "company": "Sichrotec Technology Solutions Inc.",
+    "position": "QA Engineer & Business Analyst (Freelance)",
+    "employmentType": "Freelance",
+    "startDate": "2025-12",
+    "endDate": null,
+    "current": true,
+    "description": [
+      "Perform functional and API testing to ensure software quality, reliability, and system integration accuracy.",
+      "Analyse business requirements and user workflows to identify improvements and validate solutions.",
+      "Prepare test cases, bug reports, and technical feedback while collaborating with development teams.",
+      "Validate frontend interfaces, backend processes, and database-driven features for usability and performance."
+    ],
+    "technologies": []
+  }
+]

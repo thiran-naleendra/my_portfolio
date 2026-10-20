@@ -1,0 +1,61 @@
+{
+  "name": "Thiran Naleendra",
+  "jobTitle": "Full-Stack Software Engineer",
+  "tagline": "Building Scalable Web Applications & Smart Business Solutions",
+  "summary": "I'm a Full-Stack Software Engineer specializing in Laravel, PHP, MySQL, REST APIs, and modern frontend development. I design, build, test, and deploy reliable web applications that solve real-world business problems.",
+  "about": [
+    "I'm a Full-Stack Software Engineer with hands-on experience developing web applications, business management systems, and RESTful APIs.",
+    "I specialize in Laravel, PHP, MySQL, JavaScript, React.js and Vue.js. My experience covers requirement analysis, system design, frontend and backend development, database design, software testing, deployment, and maintenance.",
+    "I enjoy transforming complex business requirements into scalable, reliable, and user-friendly software solutions."
+  ],
+  "location": "Matara, Sri Lanka",
+  "email": "wgthiran@gmail.com",
+  "phone": "(+94) 76 965 1875",
+  "github": "https://github.com/thiran-naleendra",
+  "linkedin": "https://www.linkedin.com/in/thiran-naleendra-4b8b12160/",
+  "portfolio": "https://thiran-naleendra.github.io/my_portfolio/",
+  "resumeUrl": "https://drive.google.com/file/d/1-7tTvqoeJaAmo6kqXoiekiU3Y1Xx8v-D/view?usp=sharing",
+  "image": "images/t2.jpg",
+  "availability": "\u25cf Available for software engineering opportunities",
+  "aboutBadges": [
+    "Full-Stack Development",
+    "API Integration",
+    "Laravel",
+    "React",
+    "Node.js",
+    "Business Analysis",
+    "Software QA",
+    "ERP / CRM"
+  ],
+  "expertiseSummary": "I build business-focused software solutions with strong backend logic, structured APIs, responsive interfaces, and maintainable systems that support real operational workflows.",
+  "expertise": [
+    "Web Application Development",
+    "Business Management Applications",
+    "Database Design",
+    "Booking & Payment Systems",
+    "Deployment & Maintenance",
+    "Software Testing & QA",
+    "API Development & Integration",
+    "Requirement Gathering",
+    "Performance Optimization"
+  ],
+  "strengths": [
+    "Analytical Thinking",
+    "Team Management",
+    "Interpersonal Skills",
+    "Leadership",
+    "Quick Learning",
+    "Problem Solving",
+    "Communication",
+    "Collaboration"
+  ],
+  "interests": [
+    "Travelling",
+    "Music",
+    "Swimming",
+    "Volunteering",
+    "Community Services"
+  ],
+  "contactIntro": "Have a project in mind?",
+  "contactAction": "Let\u2019s talk about it."
+}
