@@ -37,8 +37,14 @@
     fill('#hero-content',el('div','badge',p.availability),heading,el('p','hero-role',p.jobTitle),el('p','hero-tagline',p.tagline),el('p','',p.summary),actions);
     const ring=el('div','profile-ring'),img=el('img');img.src=safeUrl(p.image || 'images/t2.jpg');img.alt=`Portrait of ${p.name}`;img.width=132;img.height=132;img.fetchPriority='high';ring.append(img);
     const meta=el('ul','meta-list');
-    const fields=[['\u2709',p.email,p.email ? `mailto:${p.email}` : ''],['\u260e',p.phone,p.phone ? `tel:${p.phone.replace(/[^+0-9]/g,'')}` : ''],['\u2302',p.location,''],['in','LinkedIn Profile',p.linkedin],['GH',p.github?.replace(/^https?:\/\//,''),p.github]];
-    fields.forEach(([icon,label,url])=>{if(!label)return;const li=el('li','meta-item');li.append(el('span','meta-icon',icon),url ? anchor(label,url) : el('span','',label));meta.append(li);});
+    const fields=[['email',p.email,p.email ? `mailto:${p.email}` : ''],['phone',p.phone,p.phone ? `tel:${p.phone.replace(/[^+0-9]/g,'')}` : ''],['location',p.location,''],['linkedin','LinkedIn Profile',p.linkedin],['github',p.github?.replace(/^https?:\/\//,''),p.github]];
+    fields.forEach(([icon,label,url])=>{
+      if(!label)return;
+      const li=el('li','meta-item'),badge=el('span','meta-icon'),img=el('img');
+      badge.setAttribute('aria-hidden','true');
+      img.src=`images/icons/${icon}.svg`;img.alt='';img.width=18;img.height=18;
+      badge.append(img);li.append(badge,url ? anchor(label,url) : el('span','',label));meta.append(li);
+    });
     fill('#profile-content',ring,el('h2','',p.name),el('div','role',p.jobTitle),meta);
     const summary=el('div','card reveal');summary.append(el('h3','','Professional Summary'),...list(p.about).map(text=>el('p','',text)),pills(p.aboutBadges));
     summary.classList.add('about-summary');
