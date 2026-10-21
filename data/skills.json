@@ -7,14 +7,16 @@
         "icon": "images/skills/laravel.png"
       },
       {
-        "name": "PHP"
+        "name": "PHP",
+        "icon": "images/skills/php.svg"
       },
       {
         "name": "Node.js",
         "icon": "images/skills/node.png"
       },
       {
-        "name": "REST APIs"
+        "name": "REST APIs",
+        "icon": "images/skills/rest-api.svg"
       }
     ]
   },
@@ -38,17 +40,20 @@
         "icon": "images/skills/react.png"
       },
       {
-        "name": "Vue.js"
+        "name": "Vue.js",
+        "icon": "images/skills/vue.svg"
       },
       {
-        "name": "TypeScript"
+        "name": "TypeScript",
+        "icon": "images/skills/typescript.svg"
       },
       {
         "name": "Bootstrap",
         "icon": "images/skills/bootstrap.png"
       },
       {
-        "name": "Tailwind CSS"
+        "name": "Tailwind CSS",
+        "icon": "images/skills/tailwind.svg"
       }
     ]
   },
@@ -56,10 +61,12 @@
     "category": "Databases",
     "skills": [
       {
-        "name": "MySQL"
+        "name": "MySQL",
+        "icon": "images/skills/mysql.svg"
       },
       {
-        "name": "MS SQL"
+        "name": "MS SQL",
+        "icon": "images/skills/mssql.svg"
       },
       {
         "name": "MongoDB",
@@ -75,19 +82,24 @@
     "category": "Tools & DevOps",
     "skills": [
       {
-        "name": "Git"
+        "name": "Git",
+        "icon": "images/skills/git.svg"
       },
       {
-        "name": "GitHub"
+        "name": "GitHub",
+        "icon": "images/skills/github.svg"
       },
       {
-        "name": "GitLab"
+        "name": "GitLab",
+        "icon": "images/skills/gitlab.svg"
       },
       {
-        "name": "Postman"
+        "name": "Postman",
+        "icon": "images/skills/postman.svg"
       },
       {
-        "name": "Figma"
+        "name": "Figma",
+        "icon": "images/skills/figma.svg"
       }
     ]
   },
@@ -95,23 +107,28 @@
     "category": "Other Skills",
     "skills": [
       {
-        "name": "Software Testing"
+        "name": "Software Testing",
+        "icon": "images/skills/testing.svg"
       },
       {
-        "name": "QA"
+        "name": "QA",
+        "icon": "images/skills/qa.svg"
       },
       {
-        "name": "Business Analysis"
+        "name": "Business Analysis",
+        "icon": "images/skills/business-analysis.svg"
       },
       {
         "name": "WordPress",
         "icon": "images/skills/wordpress.png"
       },
       {
-        "name": "API Integration"
+        "name": "API Integration",
+        "icon": "images/skills/api-integration.svg"
       },
       {
-        "name": "Deployment"
+        "name": "Deployment",
+        "icon": "images/skills/deployment.svg"
       }
     ]
   }
