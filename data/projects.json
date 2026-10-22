@@ -306,26 +306,7 @@
     ],
     "order": 9
   },
-  {
-    "id": "project-10",
-    "fullDescription": "Sports business website maintenance, product-related content, and frontend improvements.",
-    "category": "Business Websites",
-    "status": "Live",
-    "technologies": ["WordPress"],
-    "features": [],
-    "image": "images/Project Preview_ Modern Software Showcase.png",
-    "imageAlt": "Generic project preview illustration; project screenshot not yet available",
-    "liveUrl": "https://kookaburrasport.com.lk/",
-    "githubUrl": null,
-    "repositoryLinks": [],
-    "featured": false,
-    "verificationNotes": [
-      "Confirm the precise maintenance contribution; no claim of sole development."
-    ],
-    "title": "Kookaburra Sport",
-    "description": "Sports business website maintenance, product-related content, and frontend improvements.",
-    "order": 10
-  },
+  
   {
     "id": "project-11",
     "fullDescription": "IT and CCTV solutions business website showcasing products and customer enquiry options.",

@@ -124,6 +124,41 @@ if(role.technologies?.length)item.append(pills(role.technologies));timeline.appe
     fill('#certifications-content',...data.map(item=>{const node=el('div','line-item');node.append(el('strong','',item.title),el('span','',`${item.provider} \u2022 ${item.date}`));if(item.url && safeUrl(item.url))node.append(anchor('View Certificate',item.url,'btn btn-secondary')); return node;}));
     $('#certification-count').textContent=data.length;
   }
+  function renderCompanyProjects(data) {
+    const seen=new Set();
+    const projects=data.filter(project=>{
+      const key=project.id || project.title?.trim().toLowerCase();
+      if(!key || seen.has(key))return false;seen.add(key);return true;
+    }).sort((a,b)=>(a.order ?? 0)-(b.order ?? 0));
+    const cards=projects.map(project=>{
+      const card=el('article','card project-card');
+      const image=el('img','project-image');image.src=safeUrl(project.image || fallbackImage);
+      image.alt=project.imageAlt || (project.image ? `${project.title} screenshot` : 'Project preview illustration');
+      image.width=640;image.height=400;image.loading='lazy';
+      if(project.imageFit==='contain')image.classList.add('project-image-contain');
+      image.addEventListener('error',()=>{image.src=fallbackImage;image.alt='Project preview illustration';},{once:true});
+      card.append(image);
+      const labels=el('div','project-labels');
+      if(project.company)labels.append(el('span','',project.company));
+      if(project.status)labels.append(el('span','status',project.status));
+      card.append(labels,el('h3','',project.title));
+      if(project.date)card.append(el('span','project-meta',project.date));
+      if(project.role)card.append(el('span','project-meta',project.role));
+      if(project.description)card.append(el('p','',project.description));
+      if(project.contribution) {
+        const details=el('details','experience-more');details.append(el('summary','','My contribution'));
+        const points=el('ul','responsibilities');list(project.contribution).forEach(text=>points.append(el('li','',text)));details.append(points);card.append(details);
+      }
+      if(project.technologies?.length)card.append(pills(project.technologies));
+      const links=el('div','project-links');
+      if(project.liveUrl && safeUrl(project.liveUrl))links.append(external('View Website',project.liveUrl));
+      if(project.githubUrl && !project.githubPrivate && safeUrl(project.githubUrl))links.append(external('GitHub',project.githubUrl));
+      if(links.childElementCount)card.append(links);
+      return card;
+    });
+    if(!cards.length)cards.push(el('p','content-status','Company project details will be added soon.'));
+    fill('#company-project-gallery',...cards);
+  }
   async function loadContent(name,render,selector) {
     const target=$(selector);target.setAttribute('aria-busy','true');
     try {
@@ -239,6 +274,7 @@ if(role.technologies?.length)item.append(pills(role.technologies));timeline.appe
   }
   loadContent('profile',renderProfile,'#hero-content');
   loadContent('projects',renderProjects,'#gallery-count');
+  loadContent('company-projects',renderCompanyProjects,'#company-project-gallery');
   loadContent('experience',renderExperience,'#experience-content');
   loadContent('skills',renderSkills,'#skills-content');
   loadContent('education',renderEducation,'#education-content');
