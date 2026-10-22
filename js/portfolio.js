@@ -31,7 +31,11 @@
   function renderProfile(p) {
     const heading=el('h1',"","");heading.append(el('span','hero-greeting',"Hi, I'm"));heading.append(el('span','gradient-text',p.name));
     const actions=el('div','hero-actions');actions.append(anchor('View My Projects','#projects','btn btn-primary'));
-    if(p.resumeUrl) actions.append(anchor('Download CV',p.resumeUrl,'btn btn-secondary btn-cv'));
+    if(p.resumeUrl) {
+      const resume=anchor('Download CV',p.resumeUrl,'btn btn-secondary btn-cv');
+      if(new URL(p.resumeUrl,document.baseURI).origin===location.origin)resume.download='Thiran_Naleendra_CV.pdf';
+      actions.append(resume);
+    }
     actions.append(anchor('Contact Me','#contact','btn btn-secondary'));
     if(p.github) actions.append(anchor('GitHub',p.github,'btn btn-secondary'));
     fill('#hero-content',el('div','badge',p.availability),heading,el('p','hero-role',p.jobTitle),el('p','hero-tagline',p.tagline),el('p','',p.summary),actions);
