@@ -125,7 +125,17 @@ if(role.technologies?.length)item.append(pills(role.technologies));timeline.appe
     fill('#education-content',...data.map(item=>{const node=el('div','timeline-item');node.append(el('span','date',item.date),el('h4','',item.title),el('div','company',item.institution));if(item.url)node.append(anchor('View qualification',item.url));return node;}));
   }
   function renderCertifications(data) {
-    fill('#certifications-content',...data.map(item=>{const node=el('div','line-item');node.append(el('strong','',item.title),el('span','',`${item.provider} \u2022 ${item.date}`));if(item.url && safeUrl(item.url))node.append(anchor('View Certificate',item.url,'btn btn-secondary')); return node;}));
+    fill('#certifications-content',...data.map(item=>{
+      const node=el('div','line-item');
+      node.append(el('strong','',item.title),el('span','',`${item.provider} \u2022 ${item.date}`));
+      if(item.certificate_id != null && String(item.certificate_id).trim()) {
+        const identifier=el('div','certificate-id','Certificate ID: ');
+        identifier.append(el('code','',String(item.certificate_id).trim()));
+        node.append(identifier);
+      }
+      if(item.url && safeUrl(item.url))node.append(anchor('View Certificate',item.url,'btn btn-secondary'));
+      return node;
+    }));
     $('#certification-count').textContent=data.length;
   }
   function renderCompanyProjects(data) {

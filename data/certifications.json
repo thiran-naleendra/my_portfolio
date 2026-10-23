@@ -1,44 +1,84 @@
 [
   {
+    "id": "certification-7",
+    "url": "https://www.linkedin.com/learning/certificates/cda10b415edd9cc7e790f992b7e04f3589cad0ca3978a11291db7be102f03ee3?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmsNwnCjdSpiE3KsgQXXONw%3D%3D",
+    "title": "Microsoft Certified: Azure Fundamentals",
+    "provider": "LinkedIn",
+    "date": "Apr 2025",
+    "certificate_id": ""
+  },
+  {
+    "id": "certification-8",
+    "url": "https://www.coursera.org/account/accomplishments/verify/9K61WQWYVJNR",
+    "title": "Build a Full Website using WordPress",
+    "provider": "Coursera",
+    "date": "Aug 2024",
+    "certificate_id": ""
+  },
+  {
     "id": "certification-1",
     "title": "Server-side Web Programming",
     "provider": "University of Moratuwa",
-    "date": "2023",
-    "url": "https://www.google.com/"
-  },
-  {
-    "id": "certification-2",
-    "title": "Front-End Web Development",
-    "provider": "University of Moratuwa",
-    "date": "2022",
-    "url": ""
+    "date": "Jul 2023",
+    "certificate_id": "MCrxCCehhZ",
+    "url": "https://open.uom.lk/lms/mod/customcert/verify_certificate.php"
   },
   {
     "id": "certification-3",
     "title": "Programming in Python",
     "provider": "University of Moratuwa",
-    "date": "2023",
-    "url": ""
+    "certificate_id": "Dc0JCWMTMW",
+    "url": "https://open.uom.lk/lms/mod/customcert/verify_certificate.php",
+    "date": "Jul 2023"
   },
   {
-    "id": "certification-4",
-    "title": "JavaScript Essential Training",
-    "provider": "LinkedIn",
-    "date": "2025",
-    "url": ""
+    "id": "certification-6",
+    "title": "Official (ISC)2 Certified in Cybersecurity (CC) Self-Paced Training - 1M",
+    "provider": "ISC2",
+    "date": "Apr 2023",
+    "url": "https://drive.google.com/file/d/1_aD54fWHD0fGBQY7STAXnktd869MFkPT/view",
+    "certificate_id": ""
   },
   {
     "id": "certification-5",
     "title": "Postman API Fundamentals Student Expert",
     "provider": "Postman",
-    "date": "2025",
-    "url": ""
+    "date": "Mar 2023",
+    "url": "https://badges.parchment.com/public/assertions/S00vxmBCSCKVWYx4wMfP5w?identity__email=wgthiran@gmail.com",
+    "certificate_id": ""
   },
   {
-    "id": "certification-6",
-    "title": "Certified in Cybersecurity (CC) Self-Paced",
-    "provider": "(ISC)2",
-    "date": "2023",
-    "url": ""
+    "id": "certification-10",
+    "url": "https://www.hackerrank.com/certificates/b1bfb9713a72",
+    "title": "Rest API (Intermediate) Certificate",
+    "provider": "HackerRank",
+    "date": "Jan 2023",
+    "certificate_id": ""
+  },
+
+  {
+    "id": "certification-2",
+    "title": "Front-End Web Development",
+    "provider": "University of Moratuwa",
+    "date": "Dec 2022",
+    "url": "https://open.uom.lk/lms/mod/customcert/verify_certificate.php",
+    "certificate_id": "AP3roIMK7o"
+  },
+  {
+    "id": "certification-14",
+    "url": "https://open.uom.lk/lms/mod/customcert/verify_certificate.php",
+    "title": "Python for Beginners",
+    "provider": "University of Moratuwa",
+    "date": "Sep 2022",
+    "certificate_id": "bSo3b2VbmP"
+  },
+
+  {
+    "id": "certification-16",
+    "url": "https://open.uom.lk/lms/mod/customcert/verify_certificate.php",
+    "title": "Web Design for Beginners",
+    "provider": "University of Moratuwa",
+    "date": "Sep 2022",
+    "certificate_id": " XcdWQYCATC"
   }
 ]

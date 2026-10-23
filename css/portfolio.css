@@ -265,3 +265,32 @@ dialog::backdrop { background:rgba(3,8,20,.65); -webkit-backdrop-filter:blur(8px
 @media(min-width:861px) { body { background-attachment:fixed; } }
 
 .project-image.project-image-contain { object-fit:contain; object-position:center; padding:12px; }
+
+.certificate-id { color:var(--muted); font-size:.8rem; line-height:1.6; overflow-wrap:anywhere; }
+.certificate-id code { color:var(--primary); font:inherit; font-family:monospace; user-select:text; }
+
+/* Independent section heights prevent a stretched, mostly empty education card. */
+#education > .container > .grid-2 { grid-template-columns:minmax(0,1fr); align-items:start; }
+#education-content { grid-template-columns:repeat(3,minmax(0,1fr)); align-items:start; }
+#certifications-content { grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; }
+#certifications-content .line-item { min-width:0; overflow-wrap:anywhere; }
+@media(max-width:860px) { #education-content { grid-template-columns:1fr; } }
+@media(max-width:720px) { #certifications-content { grid-template-columns:1fr; } }
+
+/* Connected education milestones: dates above the track, qualifications below. */
+#education-content { gap:24px; padding-top:6px; }
+#education-content .timeline-item { min-width:0; border-left:0; padding:58px 20px 0 0; margin:0; }
+#education-content .timeline-item .date { position:absolute; top:0; left:0; margin:0; font-size:.9rem; letter-spacing:.2px; }
+#education-content .timeline-item::before { left:0; top:32px; width:12px; height:12px; z-index:1; box-shadow:0 0 0 5px rgba(103,221,240,.12); }
+#education-content .timeline-item::after { content:""; position:absolute; left:6px; top:37px; width:calc(100% + 24px); height:2px; background:linear-gradient(90deg,rgba(103,221,240,.55),rgba(103,221,240,.22)); }
+#education-content .timeline-item:last-child::after { display:none; }
+#education-content h4 { margin:0 0 10px; font-size:1.05rem; line-height:1.5; }
+#education-content .company { font-size:.88rem; font-weight:400; line-height:1.7; }
+@media(max-width:860px) {
+  #education-content { gap:0; padding-left:6px; }
+  #education-content .timeline-item { padding:0 0 28px 26px; border-left:2px solid rgba(103,221,240,.3); }
+  #education-content .timeline-item:last-child { padding-bottom:0; border-color:transparent; }
+  #education-content .timeline-item .date { position:static; display:block; margin-bottom:8px; }
+  #education-content .timeline-item::before { left:-7px; top:5px; }
+  #education-content .timeline-item::after { display:none; }
+}
